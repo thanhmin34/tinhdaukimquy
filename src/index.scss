@@ -10,6 +10,12 @@
 }
 
 @layer components {
+  .swiper {
+    padding: 15px 0 !important;
+  }
+  .swiper .swiper-slide {
+    // margin-top: 10px;
+  }
 }
 .border-relex {
   border-width: 1px;
@@ -73,4 +79,16 @@
 }
 .sha {
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+.play {
+  // background-color: rgba(0, 0, 0, 0.2);
+  background-color: #000;
+  z-index: 10;
+  border-radius: 8px;
+  inset: 0;
+  opacity: 0;
+  // overflow: hidden;
+  position: relative;
+
+  transition: all 0.5s;
 }

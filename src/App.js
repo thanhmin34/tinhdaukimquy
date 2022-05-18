@@ -1,11 +1,14 @@
-import { Suspense } from "react";
+import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import Contact from "./pages/Contact";
-import Home from "./pages/Home";
-import Intro from "./pages/Intro";
-import LayOut from "./pages/layout/LayOut";
-import Product from "./pages/Product";
-import ProductDetail from "./pages/ProductDetail";
+
+const Blog = lazy(() => import("./pages/Blog"));
+const Home = lazy(() => import("./pages/Home"));
+const Cart = lazy(() => import("./pages/Cart"));
+const LayOut = lazy(() => import("./pages/layout/LayOut"));
+const Intro = lazy(() => import("./pages/Intro"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Product = lazy(() => import("./pages/Product"));
+const ProductDetail = lazy(() => import("./pages/ProductDetail"));
 
 function App() {
   return (
@@ -13,10 +16,12 @@ function App() {
       <Routes>
         <Route element={<LayOut />}>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/product" element={<Product />} />
-          <Route path="/product/:slug" element={<ProductDetail />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/gioithieu" element={<Intro />} />
+          <Route path="/san-pham" element={<Product />} />
+          <Route path="/san-pham/:slug" element={<ProductDetail />} />
+          <Route path="/lien-he" element={<Contact />} />
+          <Route path="/gioi-thieu" element={<Intro />} />
+          <Route path="/bai-viet" element={<Blog />} />
+          <Route path="/thanh-toan" element={<Cart />} />
         </Route>
       </Routes>
     </Suspense>

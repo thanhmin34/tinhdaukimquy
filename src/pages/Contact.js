@@ -38,7 +38,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col px-2 mt-5 w-full max-w-[460px] mx-auto">
+        <div className="flex flex-col px-2 mt-5 mb-32 w-full max-w-[460px] mx-auto">
           <h2 className="text-base font-bold">LIÊN HỆ</h2>
           <form action="" className="text-base font-medium">
             <div className="group-form w-full my-4">

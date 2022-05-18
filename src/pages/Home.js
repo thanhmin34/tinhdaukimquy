@@ -9,46 +9,41 @@ import Section from "../components/Section";
 const Home = () => {
   return (
     <>
-      <Swiper
-        modules={[Navigation, Autoplay, Pagination]}
-        grabCursor={"true"}
-        slidesPerView={"auto"}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-        // navigation
-        pagination={{ clickable: true }}
-      >
-        {slides.length > 0 &&
-          slides.map((item) => (
-            <SwiperSlide key={item.id}>
-              <Slider item={item} />
-            </SwiperSlide>
-          ))}
-      </Swiper>
+      <div className="w-full mx-auto mb-5">
+        <Swiper
+          modules={[Navigation, Autoplay, Pagination]}
+          grabCursor={"true"}
+          slidesPerView={"auto"}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          pagination={{ clickable: true }}
+        >
+          {slides.length > 0 &&
+            slides.map((item) => (
+              <SwiperSlide key={item.id}>
+                <Slider item={item} />
+              </SwiperSlide>
+            ))}
+        </Swiper>
+      </div>
       {/* <Info />
       <Banner img="https://tinhdaukimvui.com.vn/wp-content/uploads/2020/04/tinh-dau-tram-125ml.jpg" /> */}
 
       <Section title="Sản Phẩm Bán Chạy" />
 
-      <div className="grid grid-cols-2 w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto gap-5 my-16">
-        <div className="flex">
-          <img
-            src="/img/slide/slide1.png"
-            alt=""
-            className="border-relex-btn"
-          />
-        </div>
-        <div className="flex">
-          <img
-            src="/img/slide/slide1.png"
-            alt=""
-            className="border-relex-btn"
-          />
-        </div>
+      <div className=" w-full max-w-[1280px] px-[15px] md:px-6  xl:px-8 mx-auto  my-16">
+        <Swiper spaceBetween={20} slidesPerView={3} grabCursor={"true"}>
+          {new Array(5).fill(1).map((item, index) => (
+            <SwiperSlide key={index}>
+              <Slides img="/img/slide/slide1.png" />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-      <Section title="Sản Phẩm Mới Nhất" />
+
+      <Section title="Đang Giảm Giá" />
 
       <div className="w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto gap-5 my-16">
         <div className="w-full my-5">
@@ -75,6 +70,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Section title="Sản Phẩm Bán Chạy" />
+      <div className="mb-20"></div>
     </>
   );
 };
@@ -102,6 +99,13 @@ function Banner({ img }) {
   );
 }
 
+function Slides({ img }) {
+  return (
+    <div className="flex overflow-hidden cursor-pointer ">
+      <img src={img} alt="" className="border-relex-btn " />
+    </div>
+  );
+}
 function Info() {
   return (
     <div className=" w-full max-w-[1280px] mx-auto px-[10px] md:px-4 lg:px-5 xl:px-8 mt-5 text-[#333]">

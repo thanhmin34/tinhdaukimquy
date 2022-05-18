@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <>
       <div className="hidden w-full   h-10 leading-10  bg-[#68b943] md:flex  text-w">
-        <div className="flex items-center justify-between w-full  md:px-4 lg:px-5 xl:px-8  max-w-[1280px] mx-auto">
+        <div className="flex items-center justify-between w-full px-[15px]  md:px-6  xl:px-8  max-w-[1280px] mx-auto">
           <div className="cursor-pointer flex gap-x-5">
             <div className="flex items-center gap-x-2">
               <BiPhone />
@@ -44,13 +44,13 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="h-[70px] w-full  max-w-[1280px] mx-auto  flex items-center px-[10px] mb-5 bg-w md:justify-start md:px-4 lg:px-5 xl:px-8 ">
+      <div className="h-[70px] w-full  max-w-[1280px] mx-auto  flex items-center px-[15px] mb-5 bg-w md:justify-start md:px-6  xl:px-8 ">
         <button onClick={hanldeSetShow} className="text-2xl md:hidden z-10">
           <BiMenu />
         </button>
         <Link
           to="/"
-          className="flex-1 ml-auto flex items-center justify-center  h-full md:justify-start md:flex-none md:ml-0"
+          className=" mx-auto flex items-center justify-center  h-full md:justify-start md:flex-none md:ml-0"
         >
           <img
             src="https://tinhdaukimvui.com.vn/wp-content/uploads/2019/08/logo-kimvui.png"
@@ -67,14 +67,27 @@ const Header = () => {
         <div
           className={`${
             show ? "translate-x-0" : "-translate-x-full"
-          } fixed inset-0  md:-translate-x-0 transition-all duration-150 bg-secondary text-w  z-10 gap-y-5 pt-5  flex flex-col md:text-b md:flex-row md:pt-0 md:bg-[#fff]  md:static items-center md:gap-x-4 md:flex md:text-lg font-bold md:ml-5 lg:ml-8 xl:ml-10 lg:text-xl  lg:gap-x-5`}
+          } fixed inset-0  md:-translate-x-0 transition-all duration-150 bg-w text-c  z-10 gap-y-5 pt-5  flex flex-col md:text-b md:flex-row md:pt-0 md:bg-[#fff]  md:static items-center md:gap-x-4 md:flex md:text-lg font-bold md:ml-5 lg:ml-8 xl:ml-10 lg:text-xl  lg:gap-x-5`}
         >
-          <span className="cursor-pointer">Trang chủ</span>
-          <span className="cursor-pointer">Giới Thiệu</span>
-          <span className="cursor-pointer">Sản Phẩm</span>
-          <span className="cursor-pointer">Tin Tức</span>
-          <span className="cursor-pointer">Bài viết</span>
-          <span className="cursor-pointer">Liên Hệ</span>
+          <Link to="/" className="cursor-pointer text-c">
+            Trang chủ
+          </Link>
+          <Link to="/gioi-thieu" className="cursor-pointer text-c">
+            Giới Thiệu
+          </Link>
+          <Link to="/san-pham" className="cursor-pointer text-c">
+            Sản Phẩm
+          </Link>
+
+          <Link to="/bai-viet" className="cursor-pointer text-c">
+            Bài viết
+          </Link>
+          <Link to="/thanh-toan" className="cursor-pointer text-c">
+            Thanh Toán
+          </Link>
+          <Link to="/lien-he" className="cursor-pointer text-c">
+            Liên Hệ
+          </Link>
           <button
             onClick={() => setShow(false)}
             className="md:hidden absolute top-2 right-2 px-2 py-2"

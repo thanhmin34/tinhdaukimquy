@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductItem = () => {
   return (
-    <div className="flex relative flex-col p-2 rounded-lg shadow-lg hover:-translate-y-[1px]  cursor-pointer ">
+    <div className="flex relative flex-col p-1 rounded-lg shadow-lg hover:-translate-y-[1px]  cursor-pointer ">
       <div className="relative pt-[100%]">
         <img
           src="https://tinhdaukimvui.com.vn/wp-content/uploads/2020/02/tram-100ml-1024x1024.jpg"

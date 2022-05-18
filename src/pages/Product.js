@@ -26,7 +26,7 @@ const Product = () => {
               <Liitem title="Sản Phẩm Đi Kèm" />
             </ul>
           </div>
-          <div className="basis-full md:basis-9/12 lg:basis-10/12 sm:grid-cols-3 grid grid-cols-2 md:grid-col-2 lg:grid-cols-4 xl:grid-cols-5 gap-[10px] p-2 ">
+          <div className="mb-20 basis-full md:basis-9/12 lg:basis-10/12 sm:grid-cols-3 grid grid-cols-2 md:grid-col-2 lg:grid-cols-4 xl:grid-cols-5 gap-[10px] p-2 ">
             {new Array(20).fill(0).map((item, index) => (
               <div key={index} className="bg-w">
                 <ProductItem />

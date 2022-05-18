@@ -5,7 +5,7 @@ const Slider = ({ item }) => {
     <div className="w-full relative pt-[47.65%] z-10 ">
       <img
         src={item.img}
-        className="absolute top-0 left-0 right-0 w-full object-cover   "
+        className="absolute top-0 left-0 right-0 w-full  object-cover   "
         alt=""
       />
     </div>

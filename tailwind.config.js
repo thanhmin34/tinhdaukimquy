@@ -10,6 +10,7 @@ module.exports = {
       c: "#4c503d",
       d: "#ee4d2d",
       e: "#fbd232",
+      f: "#221f20",
     },
     fontFamily: {
       sans: ["Roboto", "sans-serif"],
@@ -19,6 +20,7 @@ module.exports = {
       sm: "640px",
       md: "768px",
       lg: "1024px",
+      x2: "1250px",
       xl: "1440px",
     },
   },

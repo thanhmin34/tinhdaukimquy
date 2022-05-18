@@ -3,8 +3,8 @@ import { FaFacebookSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      <div className=" bg-[#407710] text-w py-20 mt-20 w-full  ">
-        <div className="px-[10px] grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 md:gap-8 w-full  max-w-[1280px] mx-auto">
+      <div className=" bg-[#407710] text-w py-20  w-full  ">
+        <div className="px-[15px] md:px-6 xl:px-8 grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 md:gap-8 w-full  max-w-[1280px] mx-auto">
           <div className="flex mb-10 flex-col">
             <h2 className="text-lg font-bold">
               Nhận thông tin các chương trình khuyến mãi
@@ -80,22 +80,10 @@ const Footer = () => {
                 <span>Like Page</span>
               </a>
             </div>
-            {/* <img
-              className=" w-full max-w-[160px]"
-              src="https://tinhdaukimvui.com.vn/wp-content/uploads/2019/08/logo-kimvui.png"
-              alt=""
-            />
-            <div className="flex-1">
-              <img
-                className=" w-full max-w-[140px] ml-[20px]"
-                src="	https://tinhdaukimvui.com.vn/wp-content/uploads/2019/07/bocongthuong.png"
-                alt=""
-              />
-            </div> */}
           </div>
         </div>
       </div>
-      <div className=" text-w py-[10px] w-full   px-[10px] md:px-3 lg:px-4 xl:px-5 bg-[#68b943] h-10 leading-10 flex items-center justify-center">
+      <div className=" text-w py-[10px] w-full   px-[15px] md:px-6  xl:px-8 bg-[#68b943] h-10 leading-10 flex items-center justify-center">
         <span className="max-w-[1280px] mx-auto w-full flex  items-center justify-center">
           ©TinhDauKimQuy All rights reserved
         </span>
