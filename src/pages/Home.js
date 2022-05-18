@@ -34,7 +34,25 @@ const Home = () => {
       <Section title="Sản Phẩm Bán Chạy" />
 
       <div className=" w-full max-w-[1280px] px-[15px] md:px-6  xl:px-8 mx-auto  my-16">
-        <Swiper spaceBetween={20} slidesPerView={3} grabCursor={"true"}>
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={3}
+          grabCursor={"true"}
+          breakpoints={{
+            320: {
+              minWidth: 320,
+              slidesPerView: 1,
+            },
+            640: {
+              minWidth: 640,
+              slidesPerView: 2,
+            },
+            1000: {
+              minWidth: 1000,
+              slidesPerView: 3,
+            },
+          }}
+        >
           {new Array(5).fill(1).map((item, index) => (
             <SwiperSlide key={index}>
               <Slides img="/img/slide/slide1.png" />

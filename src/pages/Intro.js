@@ -3,13 +3,47 @@ import React from "react";
 const Intro = () => {
   return (
     <div className="w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto mt-10 text-[#333]">
-      <div className="flex flex-col font-bold text-center gap-y-1 text-sm md:text-base">
-        <h1 className="md:text-4xl text-2xl text-c ">
-          Công ty TNHH MTV Sản xuất Tinh dầu Kim Vui
+      <div className="relative pt-[39.25%] mb-10">
+        <img
+          src="/img/slide/slide1.png"
+          alt=""
+          className="absolute inset-0 object-cover w-full"
+        />
+      </div>
+      <div className="flex flex-col font-bold text-center gap-y-1 text-sm md:text-base text-c">
+        <h1 className="md:text-4xl xl:text-5xl text-2xl  py-4 border-b mx-auto">
+          ABOUT US
         </h1>
-        <span className="font-bold ">
-          chất lượng đến từ những điều nhỏ nhất
+        <span className="font-bold text-xl mt-4 lg:text-3xl ">
+          Thương hiệu tinh dầu số 1 Việt Nam
         </span>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-x-10 max-w-[1000px] mx-auto my-10 text-c text-xl font-bold">
+        <Banner
+          img="/img/kimquy.jpg"
+          title="Chiết suất"
+          desc="Tinh Dầu Thiên Nhiên"
+        />
+        <Banner
+          img="/img/kimquy.jpg"
+          title="Tinh Dầu"
+          desc="Hoàn Toàn Tự Nhiên"
+        />
+        <Banner
+          img="/img/kimquy.jpg"
+          title="Chất Lượng"
+          desc="Chất Lượng Quốc Tế"
+        />
+      </div>
+
+      <div className="py-10 bg-[#173c46] text-[15px] text-w">
+        <h2 className="text-[30px] text-center py-5">Giá Trị Cốt Lõi</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          <Brand />
+          <Brand />
+          <Brand />
+          <Brand />
+        </div>
       </div>
       <div className="mt-10 grid-cols-1 md:grid-cols-2 grid gap-x-8 gap-y-8">
         <div className="relative sha">
@@ -101,3 +135,31 @@ const Intro = () => {
 };
 
 export default Intro;
+
+function Banner({ img, title, desc }) {
+  return (
+    <div className="flex flex-col">
+      <div className="">
+        <img src={img} alt="" />
+      </div>
+      <div className="flex flex-col text-center py-5 ">
+        <h2>{title}</h2>
+        <p className="text-base font-normal">{desc}</p>
+      </div>
+    </div>
+  );
+}
+
+function Brand() {
+  return (
+    <div className="flex flex-col text-center my-5">
+      <div className="flex flex-col py-4 mx-8 bg-c text-base">
+        <h3>TÔN CHỈ</h3>
+        <span>"KHÁCH HÀNG LÀ TRUNG TÂM"</span>
+      </div>
+      <div className="text-justify mx-6 py-2 border-b mt-5">
+        Với Tinh Dầu Thái Hà, Khách hàng luôn là người đặc biệt, hấp dẫn nhất.
+      </div>
+    </div>
+  );
+}

@@ -44,7 +44,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="h-[70px] w-full  max-w-[1280px] mx-auto  flex items-center px-[15px] mb-5 bg-w md:justify-start md:px-6  xl:px-8 ">
+      <div className="h-[70px] w-full  max-w-[1280px] mx-auto  flex items-center px-[15px] mb-5 bg-w md:justify-start md:px-6  xl:px-8 border-b ">
         <button onClick={hanldeSetShow} className="text-2xl md:hidden z-10">
           <BiMenu />
         </button>
