@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "../components/Slider";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Navigation, Autoplay, Pagination } from "swiper";
@@ -7,6 +7,12 @@ import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import Section from "../components/Section";
 const Home = () => {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
   return (
     <>
       <div className="w-full mx-auto mb-5">
@@ -20,12 +26,18 @@ const Home = () => {
           }}
           pagination={{ clickable: true }}
         >
-          {slides.length > 0 &&
+          {loading ? (
+            <div className="w-full fixed inset-0 z-50 bg-[#000] flex items-center m-auto">
+              loading...
+            </div>
+          ) : (
+            slides.length > 0 &&
             slides.map((item) => (
               <SwiperSlide key={item.id}>
                 <Slider item={item} />
               </SwiperSlide>
-            ))}
+            ))
+          )}
         </Swiper>
       </div>
       {/* <Info />
@@ -33,7 +45,7 @@ const Home = () => {
 
       <Section title="Sản Phẩm Bán Chạy" />
 
-      <div className=" w-full max-w-[1280px] px-[15px] md:px-6  xl:px-8 mx-auto  my-16">
+      <div className=" w-full max-w-[1280px] px-[15px] md:px-6  xl:px-8 mx-auto md:my-5  lg:my-16">
         <Swiper
           spaceBetween={20}
           slidesPerView={3}
@@ -63,7 +75,7 @@ const Home = () => {
 
       <Section title="Đang Giảm Giá" />
 
-      <div className="w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto gap-5 my-16">
+      <div className="w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto gap-5 md:my-5 lg:my-16">
         <div className="w-full my-5">
           <img
             src="/img/slide/slide1.png"
