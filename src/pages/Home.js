@@ -27,9 +27,7 @@ const Home = () => {
           pagination={{ clickable: true }}
         >
           {loading ? (
-            <div className="w-full fixed inset-0 z-50 bg-[#000] flex items-center m-auto">
-              loading...
-            </div>
+            <div className="w-full relative pt-[47.65%] z-10 bg-[#ccc] "></div>
           ) : (
             slides.length > 0 &&
             slides.map((item) => (
