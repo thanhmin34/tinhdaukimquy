@@ -11,7 +11,7 @@ const Intro = () => {
         />
       </div>
       <div className="flex flex-col font-bold text-center gap-y-1 text-sm md:text-base text-c">
-        <h1 className="md:text-4xl xl:text-5xl text-2xl  py-4 border-b mx-auto">
+        <h1 className="md:text-4xl xl:text-5xl text-2xl  py-4 border-b mx-auto text-b">
           ABOUT US
         </h1>
         <span className="font-bold text-xl mt-4 lg:text-3xl ">
@@ -39,16 +39,32 @@ const Intro = () => {
       <div className="py-10 bg-[#173c46] text-[15px] text-w">
         <h2 className="text-[30px] text-center py-5">Giá Trị Cốt Lõi</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-          <Brand />
-          <Brand />
-          <Brand />
-          <Brand />
+          <Brand
+            title="TÔN CHỈ"
+            desc1="KHÁCH HÀNG LÀ TRUNG TÂM"
+            desc2="Với Tinh Dầu Thái Hà, Khách hàng luôn là người đặc biệt, hấp dẫn nhất."
+          />
+          <Brand
+            title="THÂN THIỆN"
+            desc1="THÂN THIỆN VỚI KHÁCH HÀNG"
+            desc2="Sản phẩm được sản xuất từ thiên nhiên không chất bảo quản."
+          />
+          <Brand
+            title="SỨC KHOẺ"
+            desc1="SỨC KHOẺ LÀ PHƯƠNG CHÂM HÀNG ĐẦU"
+            desc2="Với Thái Hà sức khoẻ khách hàng là phương châm số 1.  "
+          />
+          <Brand
+            title="CHẤT LƯỢNG"
+            desc1="KHÁCH HÀNG XIN CAM KẾT CHẤT LƯỢNG"
+            desc2="Tinh Dầu Thái Hà xin cam kết chất lượng từng sản phẩm."
+          />
         </div>
       </div>
       <div className="mt-10 grid-cols-1 md:grid-cols-2 grid gap-x-8 gap-y-8">
         <div className="relative  p-10">
           <img
-            src="/img/kimquy.jpg"
+            src="/thaiviet1.jpg"
             alt=""
             className="w-full h-full object-cover"
           />
@@ -58,17 +74,17 @@ const Intro = () => {
             CHẤT LƯỢNG HÀNG ĐẦU
           </h2>
           <p className="text-justify text-base md:text-base leading-7 md:leaidng-6 border border-[#d3d4d8] p-3">
-            Kim Vui đặt yếu tố CHẤT LƯỢNG là HÀNG ĐẦU, với tiêu chí : “Mình
+            Thái Việt đặt yếu tố CHẤT LƯỢNG là HÀNG ĐẦU, với tiêu chí : “Mình
             dùng, khách hàng dùng, bán sản phẩm để mua lại Lòng Tin của khách
             hàng”. Từ xa xưa, Tinh dầu được ví như là nhựa sống của cây, vì vậy
             đã mang sức sống, năng lượng và mạnh hơn 100 lần các loại thảo dược
             sấy khô. <br /> Tuy nhiên, giữa thị trường tinh dầu như hiện nay thì
             để tìm ra được tinh dầu đảm bảo chất lượng không phải là điều dễ
-            dàng. Hiểu được điều đó, Công ty TNHH MTV Sản xuất Tinh dầu Kim Vui
-            đã duy trì và phát huy nghề truyền thống sản xuất tinh dầu của cha
-            ông để lại với phương châm “Sức khỏe là Vàng”. Bên cạnh muốn lưu giữ
-            nghề truyền thống và hướng đến sản phẩm chăm sóc sức khỏe đến tay
-            người tiêu dùng và cộng đồng.
+            dàng. Hiểu được điều đó, Công ty TNHH MTV Sản xuất Tinh dầu Thái
+            Việt đã duy trì và phát huy nghề truyền thống sản xuất tinh dầu của
+            cha ông để lại với phương châm “Sức khỏe là Vàng”. Bên cạnh muốn lưu
+            giữ nghề truyền thống và hướng đến sản phẩm chăm sóc sức khỏe đến
+            tay người tiêu dùng và cộng đồng.
           </p>
         </div>
       </div>
@@ -77,7 +93,7 @@ const Intro = () => {
           <div className="flex flex-col md:flex-row md:gap-x-5">
             <div className="flex flex-col  md:max-w-[500px] lg:max-w-[600px]">
               <h2 className="text-xl md:text-base lg:text-2xl font-bold text-center mb-2 lg:mb-5 ">
-                LÝ DO NÊN LỰA CHỌN TINH DẦU “KIM VUI”
+                LÝ DO NÊN LỰA CHỌN TINH DẦU “THÁI VIỆT”
               </h2>
               <p className="text-justify text-base  leading-7 md:leaidng-6 p-3 border border-[#d3d4d8] mb-2 ">
                 Trong thời đại công nghiệp hóa hiện nay, con người đang phải
@@ -86,18 +102,18 @@ const Intro = () => {
                 <br /> Bản chât của Tinh dầu là sẽ đi qua đường hô hấp, qua da
                 và ngấm vào máu, nó ảnh hưởng đến sức khỏe của bạn và gia đình,
                 nên sự chọn lựa của bạn, sự quyết định của bạn là vô cùng quan
-                trọng. Tinh dầu Kim Vui sẽ giúp bạn điều đó!
+                trọng. Tinh dầu Thái Việt sẽ giúp bạn điều đó!
                 <br />
                 Dựa trên cơ sơ phương pháp chưng cất truyền thống, tinh dầu Kim
                 Vui đã tiếp cận được phương pháp chưng cất hiện đại, đầu tư cơ
                 sơ vật chất, máy móc hiện đại, nâng cao chất lượng nguồn nhân
                 lực, có quy trình chọn lọc nghiêm ngặt nguyên liệu để cho ra đời
-                sản phẩm chất lượng uy tín nhất. Từ đó Tinh dầu Kim Vui được
+                sản phẩm chất lượng uy tín nhất. Từ đó Tinh dầu Thái Việt được
                 nhiều khách hàng biết đến và là lựa chọn ưu tiên của khách hàng.
               </p>
             </div>
             <div className="p-5 md:p-3 md:gap-y-5 md:flex md:flex-col md:mt-5 xl:-translate-y-24">
-              <img src="/img/luachon.jpg" alt="" />
+              <img src="/thaiviet2.jpg" alt="" />
               <img
                 src="/img/luachon.jpg"
                 alt=""
@@ -116,17 +132,17 @@ const Intro = () => {
             <p className="text-justify text-base md:text-base leading-7 md:leaidng-6 p-3 border border-[#d3d4d8] mb-2   ">
               Đã từ lâu tinh dầu không chỉ dừng lại chỉ là một loại chất làm
               thơm, mà nó còn có rất nhiều những công dụng khác vô cùng tốt cho
-              sức khỏe con người. Công ty sản xuất tinh dầu Kim Vui CAM KẾT về
-              chất lượng của tất cả các sản phẩm mà Kim Vui đang cung cấp cho
-              quý khách hàng. Kim Vui đặt yếu tố CHẤT LƯỢNG là HÀNG ĐẦU, với
+              sức khỏe con người. Công ty sản xuất tinh dầu Thái Việt CAM KẾT về
+              chất lượng của tất cả các sản phẩm mà Thái Việt đang cung cấp cho
+              quý khách hàng. Thái Việt đặt yếu tố CHẤT LƯỢNG là HÀNG ĐẦU, với
               tiêu chí : “Mình dùng, khách hàng dùng, bán sản phẩm để mua lại
               Lòng Tin của khách hàng”.
               <br />
-              Kim Vui cung cấp đến khách hàng nhiều loại tinh dầu khác nhau, vì
-              vậy đáp ứng được sự lựa chọn tối đa của khách hàng. Tinh dầu Kim
-              Vui có các loại tinh dầu như tinh dầu Tràm, tinh dầu Massage, tinh
-              dầu Bạc Hà, tinh dầu Quế, tinh dầu Dừa, tinh dầu Trầm Hương, tinh
-              dầu Sả.
+              Thái Việt cung cấp đến khách hàng nhiều loại tinh dầu khác nhau,
+              vì vậy đáp ứng được sự lựa chọn tối đa của khách hàng. Tinh dầu
+              Kim Vui có các loại tinh dầu như tinh dầu Tràm, tinh dầu Massage,
+              tinh dầu Bạc Hà, tinh dầu Quế, tinh dầu Dừa, tinh dầu Trầm Hương,
+              tinh dầu Sả.
             </p>
             <span className="text-d my-4 lg:block hidden text-center">
               Sản phẩm tinh dầu tràm Huế nguyên chất của công ty đã được cấp
@@ -149,28 +165,31 @@ const Intro = () => {
             Mọi thông tin xin liên hệ
           </h2>
           <li>
-            <strong className="mr-[px]">Địa chỉ:</strong> 01 Nguyễn Hữu Ba –
-            Phường An Cựu – Thành phố Huế – Việt Nam.
+            <strong className="mr-[px]">Địa chỉ:</strong> Thôn Phước Lộc, xã Lộc
+            Tiến, huyện Phú Lộc, tỉnh Thừa Thiên Huế
           </li>
           <li>
-            <strong className="mr-[2px]"> Điện thoại:</strong> 0234. 3814 672 –
-            0934 898 552 – 077 9422 063 – 079 6613 941
+            <strong className="mr-[2px]"> Điện thoại:</strong> 0975 66 18 47
           </li>
           <li>
             <strong className="mr-[4px]"> Facebook:</strong>
-            <a href="www.facebook.com/kimvuivietnam/">
-              www.facebook.com/kimvuivietnam
+            <a href="https://www.facebook.com/Tinh-d%E1%BA%A7u-tr%C3%A0m-Th%C3%A1i-Vi%E1%BB%87t-109590670612615/">
+              www.facebook.com/tinhdauthaiviet
             </a>
           </li>
           <li>
             <strong className="mr-[4px]"> Youtube:</strong>
-            <a href="www.facebook.com/kimvuivietnam/">
-              www.youtube.com/kimvuivietnam
+            <a href="www.facebook.com/tinhdauthaiviet/">
+              www.youtube.com/tinhdauthaiviet
             </a>
           </li>
         </ul>
         <div className="flex ">
-          <img src="/img/tapthe.jpg" alt="" className="border border-[#bbb] " />
+          <img
+            src="/thaiviet.jpeg"
+            alt=""
+            className="border border-[#bbb] w-full h-full object-cover"
+          />
         </div>
       </div>
     </div>
@@ -193,16 +212,14 @@ function Banner({ img, title, desc }) {
   );
 }
 
-function Brand() {
+function Brand({ title, desc1, desc2 }) {
   return (
     <div className="flex flex-col text-center my-5">
       <div className="flex flex-col py-4 mx-8 bg-c text-base">
-        <h3>TÔN CHỈ</h3>
-        <span>"KHÁCH HÀNG LÀ TRUNG TÂM"</span>
+        <h3>{title}</h3>
+        <span>"{desc1}"</span>
       </div>
-      <div className="text-justify mx-6 py-2 border-b mt-5">
-        Với Tinh Dầu Thái Hà, Khách hàng luôn là người đặc biệt, hấp dẫn nhất.
-      </div>
+      <div className="text-justify mx-6 py-2 border-b mt-5">{desc2}</div>
     </div>
   );
 }

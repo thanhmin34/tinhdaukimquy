@@ -63,7 +63,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <Wrapper h1="CÔNG TY TNHH SẢN XUẤT TINH DẦU KIM VUI" desc={desc1} />
+          <Wrapper h1="CÔNG TY TNHH SẢN XUẤT TINH DẦU THÁI VIỆT" desc={desc1} />
           <Wrapper h1="CHÍNH SÁCH HỖ TRỢ" desc={desc2} />
 
           <div className="flex  flex-col">
@@ -85,7 +85,7 @@ const Footer = () => {
       </div>
       <div className=" text-w py-[10px] w-full   px-[15px] md:px-6  xl:px-8 bg-[#68b943] h-10 leading-10 flex items-center justify-center">
         <span className="max-w-[1280px] mx-auto w-full flex  items-center justify-center">
-          ©TinhDauKimQuy All rights reserved
+          ©TinhDauThaiViet All rights reserved
         </span>
       </div>
     </>
@@ -109,10 +109,10 @@ function Wrapper({ h1, desc }) {
 }
 
 const desc1 = [
-  "Địa Chỉ: Số 01 Nguyễn Hữu Ba - Phường An Cựu - TP. Huế - Việt Nam",
-  "Người đại diện: Trần Thị Vui",
-  "Số Điện Thoại: 0234 3814.672",
-  "Email: tinhdaukimvui@gmail.com",
+  "Địa Chỉ: Thôn Phước Lộc, xã Lộc Tiến, huyện Phú Lộc, tỉnh Thừa Thiên Huế",
+  "Người đại diện: Nguyễn Tiến Dũng",
+  "Số Điện Thoại: 0984 080 155",
+  "Email: Tinhdauthaiviet@gmail.com",
 ];
 
 const desc2 = [

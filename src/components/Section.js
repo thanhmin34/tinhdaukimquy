@@ -1,12 +1,13 @@
 import React from "react";
-import ProductItem from "./ProductItem";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import "swiper/scss";
+import ProductItem2 from "./ProductItem2";
 const Section = ({ title }) => {
   return (
     <div className=" w-full max-w-[1280px] mx-auto px-[10px] md:px-4 lg:px-5 xl:px-8 mt-10">
-      <h2 className="text-center text-4xl  xl:text-5xl font-bold text-c ">
+      <h2 className="text-center text-4xl  xl:text-5xl font-bold text-b ">
         {title}
       </h2>
       <div className=" py-10">
@@ -44,7 +45,7 @@ const Section = ({ title }) => {
         >
           {new Array(20).fill(0).map((item, index) => (
             <SwiperSlide key={index}>
-              <ProductItem />
+              <ProductItem2 />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -54,19 +55,3 @@ const Section = ({ title }) => {
 };
 
 export default Section;
-
-// breakpoints={{
-//   1240: {
-//     minWidth: 1240,
-//     slidesPerView: 4,
-//   },
-
-//   678: {
-//     minWidth: 678,
-//     slidesPerView: 3,
-//   },
-//   320: {
-//     minWidth: 300,
-//     slidesPerView: 2,
-//   },
-// }}

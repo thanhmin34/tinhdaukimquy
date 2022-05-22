@@ -5,11 +5,12 @@ import {
   createUserWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import { addDoc, collection, onSnapshot } from "firebase/firestore";
+import { addDoc, collection, onSnapshot, query } from "firebase/firestore";
 import ProductItem from "../components/ProductItem";
 const Login = () => {
   const [products, setProduct] = useState([]);
   const [values, setValues] = useState({ used: "", password: "" });
+  const [query, setQuery] = useState("products");
 
   const hanldeSetValues = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
@@ -49,7 +50,7 @@ const Login = () => {
   };
 
   useEffect(() => {
-    const proRef = collection(db, "products");
+    const proRef = collection(db, query);
     onSnapshot(proRef, (snapshop) => {
       let pro = [];
       snapshop.docs.forEach((doc) => {
@@ -60,8 +61,9 @@ const Login = () => {
       });
       setProduct(pro);
     });
-  }, []);
-  console.log(products);
+  }, [query]);
+  //   console.log(query);
+  //   console.log(products);
   return (
     <>
       <div className="w-full max-w-[500px] mx-auto mt-[200px] text-base font-medium border border-[#ccc]">
@@ -90,12 +92,13 @@ const Login = () => {
         <button onClick={hanldeSignOut}>SignOut</button>
       </div>
       <div className="w-full max-w-[1200px] mx-auto grid grid-cols-4 gap-x-5 mt-10">
-        {products.length > 0 &&
+        {/* {products.length > 0 &&
           products.map((pro) => (
             <div key={pro.id}>
               <ProductItem item={pro} />
             </div>
-          ))}
+          ))} */}
+        {/* <button onClick={() => setQuery("used")}>toggle</button> */}
       </div>
     </>
   );

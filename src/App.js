@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Login from "./admin/Login";
+import CheckOutPayment from "./pages/CheckOutPayment";
 
 const Blog = lazy(() => import("./pages/Blog"));
 const Home = lazy(() => import("./pages/Home"));
@@ -23,6 +24,7 @@ function App() {
           <Route path="/gioi-thieu" element={<Intro />} />
           <Route path="/bai-viet" element={<Blog />} />
           <Route path="/thanh-toan" element={<Cart />} />
+          <Route path="/thanh-toan/:slug" element={<CheckOutPayment />} />
         </Route>
         <Route path="/login" element={<Login />} />
       </Routes>

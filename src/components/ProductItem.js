@@ -1,28 +1,45 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
+
 const ProductItem = ({ item }) => {
-  // console.log(item);
+  const navigate = useNavigate();
+  const hanldeSlug = async () => {
+    await navigate(`/san-pham/${item.slug}`);
+  };
+
   return (
-    <div className="flex relative flex-col p-1 rounded-lg shadow-lg hover:-translate-y-[1px]  cursor-pointer ">
+    <div className="flex relative flex-col  rounded-lg shadow-lg hover:-translate-y-[1px]  cursor-pointer ">
       <div className="relative pt-[100%]">
         <img
-          src="/img/sp01.jpg"
+          src={item.image}
+          // src="/sp01/jpg"
           alt=""
-          className="absolute top-0 left-0 right-0 object-cover w-full h-full"
+          className="absolute top-0 left-0 right-0 object-cover w-full h-full "
         />
       </div>
       <div className="body-item font-medium text-lg mt-2">
-        <p className="text-center text__over-1">Tinh dầu tràm huế</p>
+        <p className="text-center text__over-1 text-c">
+          {item.name || "Tinh dầu tràm huế"}
+        </p>
         <div className="flex items-center justify-center gap-x-4 text-center text-base font-medium mt-2 mb-1">
           <div className="relative text-d ">
-            <span>500.000</span>
+            <span>{item.pricesale || 500.0}</span>
+
             <span className=" text-[10px] absolute -top-2">đ</span>
           </div>
           <div className="relative text-[#bbb] ">
-            <span className="line-through text-sm">500.000</span>
+            <span className="line-through text-sm">{item.price || 500.0}</span>
+            {/* <span className="line-through text-sm">500.000</span> */}
             <span className=" text-[10px] absolute -top-2">đ</span>
           </div>
         </div>
+        <button
+          onClick={hanldeSlug}
+          className="py-2 text-base my-3 mx-auto  w-full max-w-[122px] bg-w text-d outline-none border border-d flex items-center justify-center"
+        >
+          Mua hàng
+        </button>
       </div>
       <div className="absolute top-0 -right-0 px-2  bg-e text-w text-xs w-10 h-10 flex flex-col justify-center items-center sale-item">
         <span>Giảm</span>

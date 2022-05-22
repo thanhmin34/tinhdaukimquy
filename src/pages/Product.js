@@ -1,9 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineMenuUnfold, AiOutlineCaretRight } from "react-icons/ai";
 import ProductItem from "../components/ProductItem";
-
+import { db } from "../firebase/config";
+import { collection, onSnapshot } from "firebase/firestore";
 const Product = () => {
+  const [products, setProduct] = useState([]);
+  useEffect(() => {
+    const proRef = collection(db, "products");
+    onSnapshot(proRef, (snapshot) => {
+      let pro = [];
+      snapshot.docs.forEach((item) => {
+        pro.push({
+          id: item.id,
+          ...item.data(),
+        });
+      });
+      setProduct(pro);
+    });
+  }, []);
+
   return (
     <div className="w-full bg-[#f5f5f5]">
       <div className="w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto  pt-5 pb-10">
@@ -27,11 +43,8 @@ const Product = () => {
             </ul>
           </div>
           <div className="mb-20 basis-full md:basis-9/12 lg:basis-10/12 sm:grid-cols-3 grid grid-cols-2 md:grid-col-2 lg:grid-cols-4 xl:grid-cols-5 gap-[10px] p-2 ">
-            {new Array(20).fill(0).map((item, index) => (
-              <div key={index} className="bg-w">
-                <ProductItem />
-              </div>
-            ))}
+            {products.length > 0 &&
+              products.map((item) => <ProductItem key={item.id} item={item} />)}
           </div>
         </div>
       </div>

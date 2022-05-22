@@ -12,6 +12,10 @@ const Home = () => {
     setTimeout(() => {
       setLoading(false);
     }, 3000);
+
+    return () => {
+      clearTimeout();
+    };
   }, []);
   return (
     <>
@@ -26,16 +30,12 @@ const Home = () => {
           }}
           pagination={{ clickable: true }}
         >
-          {loading ? (
-            <div className="w-full relative pt-[47.65%] z-10 bg-[#ccc] "></div>
-          ) : (
-            slides.length > 0 &&
+          {slides.length > 0 &&
             slides.map((item) => (
               <SwiperSlide key={item.id}>
                 <Slider item={item} />
               </SwiperSlide>
-            ))
-          )}
+            ))}
         </Swiper>
       </div>
       {/* <Info />
@@ -63,9 +63,9 @@ const Home = () => {
             },
           }}
         >
-          {new Array(5).fill(1).map((item, index) => (
+          {slide2.map((item, index) => (
             <SwiperSlide key={index}>
-              <Slides img="/img/slide/slide1.png" />
+              <Slides img={item.img} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -84,16 +84,16 @@ const Home = () => {
         <div className="grid grid-cols-2 gap-x-5">
           <div className="flex">
             <img
-              src="/img/slide/slide1.png"
+              src="/img/slide/slide5.png"
               alt=""
               className="border-relex-btn"
             />
           </div>
           <div className="flex">
             <img
-              src="/img/slide/slide1.png"
+              src="/img/slide/slide7.jpeg"
               alt=""
-              className="border-relex-btn"
+              className="border-relex-btn w-full h-full object-cover"
             />
           </div>
         </div>
@@ -115,7 +115,7 @@ const slides = [
   },
   {
     id: 3,
-    img: "/img/slide/slide3.png",
+    img: "/img/slide/slide4.png",
   },
 ];
 
@@ -130,7 +130,11 @@ function Banner({ img }) {
 function Slides({ img }) {
   return (
     <div className="flex overflow-hidden cursor-pointer ">
-      <img src={img} alt="" className="border-relex-btn " />
+      <img
+        src={img}
+        alt=""
+        className="border-relex-btn w-full h-full object-cover"
+      />
     </div>
   );
 }
@@ -162,4 +166,12 @@ function Info() {
     </div>
   );
 }
+
 export default Home;
+
+const slide2 = [
+  { img: "/img/slide/slide6.png" },
+  { img: "/img/slide/slide4.png" },
+  { img: "/img/slide/slide2.png" },
+  { img: "/img/slide/slide3.png" },
+];
