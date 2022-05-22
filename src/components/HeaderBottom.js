@@ -2,9 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { BiMenu, BiPhone, BiSearch } from "react-icons/bi";
 import { HiOutlineShoppingBag } from "react-icons/hi";
-
+import { useSelector } from "react-redux";
 const HeaderBottom = () => {
   const [show, setShow] = useState(false);
+  const cartNumber = useSelector((state) => state.cart.value);
+
   const [scroll, SetScroll] = useState(false);
   const menuRef = useRef(null);
   const hanldeSetShow = () => {
@@ -50,12 +52,15 @@ const HeaderBottom = () => {
       >
         <img src="/logo-1.png" alt="" className="h-full p-2" />
       </Link>
-      <div className="cart text-xl relative  rounded-full w-6 h-6 flex items-center justify-center text-w bg-d md:hidden">
+      <Link
+        to="/thanh-toan"
+        className="cart text-xl relative  rounded-full w-6 h-6 flex items-center justify-center text-w bg-d md:hidden"
+      >
         <HiOutlineShoppingBag />
         <div className="absolute bg-d -top-[6px] -right-[6px] w-[16px] h-[16px] text-xs flex items-center justify-center rounded-full">
-          <span className="text-w">5</span>
+          <span className="text-w">{cartNumber.length || 0}</span>
         </div>
-      </div>
+      </Link>
       <div
         ref={menuRef}
         className={`${show ? "translate-x-0" : "-translate-x-full"} 

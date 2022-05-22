@@ -32,12 +32,12 @@ const Header = () => {
               <span className="text-base leading-[16px] mr-2">Facebook</span>
               <GrFacebookOption />
             </Link>
-            <div className="flex relative ">
+            <Link to="/thanh-toan" className="flex relative ">
               <HiOutlineShoppingBag />
               <div className="absolute bg-w -top-[6px] -right-[10px]  w-4 h-4 text-xs flex items-center justify-center rounded-full">
-                <span className="text-b">{cartNumber.length}</span>
+                <span className="text-b">{cartNumber.length || 0}</span>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

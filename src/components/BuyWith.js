@@ -8,7 +8,7 @@ const BuyWith = () => {
       <h2 className="text-center text-3xl font-medium mb-10 lg:mb-20">
         CÓ THỂ BẠN THÍCH
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-10  mb-10 gap-y-5 lg:mb-20">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-[10px]  mb-10 gap-y-5 lg:mb-20">
         <ProductItem2 />
         <ProductItem2 />
         <ProductItem2 />
