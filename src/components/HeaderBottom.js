@@ -120,7 +120,7 @@ const HeaderBottom = () => {
               : "text-c cursor-pointer"
           }
         >
-          Thanh Toán
+          Giỏ Hàng
         </NavLink>
         <NavLink
           to="/lien-he"

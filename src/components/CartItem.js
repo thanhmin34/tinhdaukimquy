@@ -33,20 +33,20 @@ const CartItem = (props) => {
         <img src={item.image} alt="" className="w-20" />
       </div>
       <div className="flex text-sm font-normal flex-1 flex-col gap-y-4">
-        <p className="text__over-1">{item.name}</p>
-        <div className="flex items-center border border-[#ccc] w-full max-w-[124px] text-base font-medium">
+        <p className="text__over-1">{item.title}</p>
+        <div className="flex items-center border border-[#ccc] w-full max-w-[84px] md:max-w-[124px] text-base font-medium">
           <div
             onClick={() => hanldeChange("-")}
-            className="px-4 py-2 cursor-pointer text-xl hover:opacity-80"
+            className="px-2 md:px-4 py-2 cursor-pointer text-xl hover:opacity-80"
           >
             -
           </div>
-          <span className="px-4 py-2 flex-1 text-center mx-auto">
+          <span className="px-1 md:px-4 py-2 md:flex-1 text-center mx-auto">
             {quantity}
           </span>
           <div
             onClick={() => hanldeChange("+")}
-            className="px-4 py-2 cursor-pointer text-xl hover:opacity-80"
+            className="px-2 md:px-4 py-2 cursor-pointer text-xl hover:opacity-80"
           >
             +
           </div>

@@ -4,22 +4,13 @@ import { AiOutlineMenuUnfold, AiOutlineCaretRight } from "react-icons/ai";
 import ProductItem from "../components/ProductItem";
 import { db } from "../firebase/config";
 import { collection, onSnapshot } from "firebase/firestore";
+import productData from "../data/products";
 const Product = () => {
   const [products, setProduct] = useState([]);
+  const proAll = productData.getAllProducts();
   useEffect(() => {
-    const proRef = collection(db, "products");
-    onSnapshot(proRef, (snapshot) => {
-      let pro = [];
-      snapshot.docs.forEach((item) => {
-        pro.push({
-          id: item.id,
-          ...item.data(),
-        });
-      });
-      setProduct(pro);
-    });
-  }, []);
-
+    setProduct(proAll);
+  }, [proAll]);
   return (
     <div className="w-full bg-[#f5f5f5]">
       <div className="w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto  pt-5 pb-10">
@@ -44,7 +35,9 @@ const Product = () => {
           </div>
           <div className="mb-20 basis-full md:basis-9/12 lg:basis-10/12 sm:grid-cols-3 grid grid-cols-2 md:grid-col-2 lg:grid-cols-4 xl:grid-cols-5 gap-[10px] p-2 ">
             {products.length > 0 &&
-              products.map((item) => <ProductItem key={item.id} item={item} />)}
+              products.map((item, index) => (
+                <ProductItem key={index} item={item} />
+              ))}
           </div>
         </div>
       </div>

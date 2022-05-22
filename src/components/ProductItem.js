@@ -13,14 +13,13 @@ const ProductItem = ({ item }) => {
       <div className="relative pt-[100%]">
         <img
           src={item.image}
-          // src="/sp01/jpg"
           alt=""
           className="absolute top-0 left-0 right-0 object-cover w-full h-full "
         />
       </div>
       <div className="body-item font-medium text-lg mt-2">
         <p className="text-center text__over-1 text-c">
-          {item.name || "Tinh dầu tràm huế"}
+          {item.title || "Tinh dầu tràm huế"}
         </p>
         <div className="flex items-center justify-center gap-x-4 text-center text-base font-medium mt-2 mb-1">
           <div className="relative text-d ">

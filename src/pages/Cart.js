@@ -39,7 +39,7 @@ const Cart = () => {
         ) : (
           <>
             <div className="basis-full text-base font-semibold text-f md:basis-9/12  md:px-4">
-              <h2 className="">
+              <h2 className="mb-5">
                 Giỏ hàng của bạn có
                 <span className="text-d ml-1">{cartItems.length} sản phẩm</span>
               </h2>
@@ -60,9 +60,7 @@ const Cart = () => {
             <div className="basis-full mt-5 py-4 text-sm font-normal md:basis-3/12 md:px-4 ">
               <div className="hidden lg:flex items-center justify-between mb-5 ">
                 <p className="text-[#57585a]">Tổng sản phẩm</p>
-                <span className="text-base font-bold">
-                  {cartItems.length + 1}
-                </span>
+                <span className="text-base font-bold">{cartItems.length}</span>
               </div>
               <div className="hidden lg:flex items-center justify-between mb-5 ">
                 <p className="text-[#57585a]">Tổng tiền hàng</p>
@@ -73,9 +71,12 @@ const Cart = () => {
                 <span className="text-base font-bold">{totalPrice}đ</span>
               </div>
               <div className="mx-10 border-b mb-4 mt-2"></div>
-              <button className=" w-full max-w-[320px] md:max-w-full px-2 py-[12px] text-base font-bold bg-d border outline-none rounded-lg text-w gap-x-[2px] hover:opacity-80 items-center justify-center flex">
+              <Link
+                to="/checkout"
+                className="cursor-pointer w-full max-w-[320px] md:max-w-full px-2 py-[12px] text-base font-bold bg-d border outline-none rounded-lg text-w gap-x-[2px] hover:opacity-80 items-center justify-center flex"
+              >
                 Đặt Hàng
-              </button>
+              </Link>
             </div>
           </>
         )}

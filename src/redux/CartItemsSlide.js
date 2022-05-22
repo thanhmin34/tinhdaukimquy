@@ -25,6 +25,8 @@ export const CartItemsSlide = createSlice({
             slug: newItem.slug,
             image: newItem.image,
             price: newItem.price,
+            title: newItem.title,
+
             quantity: newItem.quantity + duplicate[0].quantity,
           },
         ];
@@ -59,6 +61,7 @@ export const CartItemsSlide = createSlice({
             id: item[0].id,
             slug: newItem.slug,
             image: newItem.image,
+            title: newItem.title,
             price: newItem.price,
             quantity: newItem.quantity,
           },
