@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import "swiper/scss";
-import ProductItem2 from "./ProductItem2";
-const Section = ({ title }) => {
+
+import ProductItem from "./ProductItem";
+const Section = ({ title, data: productSaler }) => {
   return (
     <div className=" w-full max-w-[1280px] mx-auto px-[10px] md:px-4 lg:px-5 xl:px-8 mt-10">
       <h2 className="text-center text-4xl  xl:text-5xl font-bold text-b ">
@@ -43,11 +44,12 @@ const Section = ({ title }) => {
             },
           }}
         >
-          {new Array(20).fill(0).map((item, index) => (
-            <SwiperSlide key={index}>
-              <ProductItem2 />
-            </SwiperSlide>
-          ))}
+          {productSaler.length > 0 &&
+            productSaler.map((item, index) => (
+              <SwiperSlide key={index}>
+                <ProductItem item={item} />
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
     </div>

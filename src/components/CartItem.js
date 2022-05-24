@@ -26,7 +26,7 @@ const CartItem = (props) => {
   const hanldeDeleteCart = (item) => {
     dispatch(removeItem(item));
   };
-  console.log(item);
+
   return (
     <div className="flex py-4 gap-x-2 border-b">
       <div className="flex">

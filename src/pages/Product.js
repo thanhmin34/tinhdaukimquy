@@ -6,11 +6,22 @@ import { db } from "../firebase/config";
 import { collection, onSnapshot } from "firebase/firestore";
 import productData from "../data/products";
 const Product = () => {
+  const [checked, setChecked] = useState(null);
   const [products, setProduct] = useState([]);
   const proAll = productData.getAllProducts();
+
   useEffect(() => {
     setProduct(proAll);
   }, [proAll]);
+  const hanldeClick = (slug) => {
+    if (slug) {
+      const categ = proAll.filter((item) => item.categorySlug === slug);
+      setProduct(categ);
+    } else {
+      setProduct(proAll);
+    }
+  };
+
   return (
     <div className="w-full bg-[#f5f5f5]">
       <div className="w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto  pt-5 pb-10">
@@ -26,11 +37,16 @@ const Product = () => {
               <h2 className="text-xl font-bold ">Danh mục</h2>
             </div>
             <ul className="flex flex-col gap-y-2 font-medium text-sm">
-              <Liitem title="Tinh Dầu Tràm" />
-              <Liitem title="Tinh Dầu Massage" />
-              <Liitem title="Tinh Dầu Thiên Nhiên" />
-              <Liitem title="Thảo Mộc Cung Đình" />
-              <Liitem title="Sản Phẩm Đi Kèm" />
+              {category.map((item) => (
+                <li
+                  key={item.id}
+                  className="flex items-center gap-x-1 py-2 cursor-pointer "
+                >
+                  <span onClick={() => hanldeClick(item.categorySlug)}>
+                    {item.display}
+                  </span>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="mb-20 basis-full md:basis-9/12 lg:basis-10/12 sm:grid-cols-3 grid grid-cols-2 md:grid-col-2 lg:grid-cols-4 xl:grid-cols-5 gap-[10px] p-2 ">
@@ -45,13 +61,32 @@ const Product = () => {
   );
 };
 
-function Liitem({ title }) {
-  const [show, setShow] = useState(false);
-  return (
-    <li className="flex items-center gap-x-1 py-2 ">
-      <span className="text-[10px]">{show ? <AiOutlineCaretRight /> : ""}</span>
-      <span>{title}</span>
-    </li>
-  );
-}
 export default Product;
+
+const category = [
+  {
+    id: 1,
+    display: "Tinh Dầu",
+    categorySlug: "tinh-dau",
+  },
+  {
+    id: 2,
+    display: "Tinh Dầu Treo",
+    categorySlug: "tinh-dau-treo",
+  },
+  {
+    id: 3,
+    display: "Xit Phòng ",
+    categorySlug: "xit-phong",
+  },
+  {
+    id: 4,
+    display: "Vitamin",
+    categorySlug: "vitamin",
+  },
+  {
+    id: 5,
+    display: "Sản Phẩm Khác ",
+    categorySlug: "khac",
+  },
+];

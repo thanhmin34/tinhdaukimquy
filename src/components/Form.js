@@ -18,7 +18,8 @@ const schema = yup.object({
     .integer("Số điện thoại không được bao gồm phân tích thập phân")
     .min(10),
 });
-const Form = () => {
+const Form = ({ cart }) => {
+  // console.log(cart);
   const {
     register,
     handleSubmit,
@@ -30,106 +31,123 @@ const Form = () => {
       {
         ...data,
         products: {
-          name: "tinh dau tram",
-          price: 5000,
-          quantity: 2,
+          ...cart,
         },
       },
     ];
-    console.log(pro);
+    // console.log(pro);
   };
 
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
       action=""
-      className=" w-full  max-w-[360px] mx-auto"
+      className=" w-full  max-w-[360px] mx-auto md:max-w-[500px] md:mx-0 x2:max-w-[650px]"
     >
-      <div className="py-2">
+      <div className="my-4 relative text-sm  ">
         <input
           type="text"
           name="name"
+          placeholder=" "
           {...register("name")}
-          className="my-2 px-2 py-2 border border-[#d1d1d1] w-full outline-none focus:border-d"
-          placeholder="Họ tên*"
+          className=" px-2 py-2 border border-[#d1d1d1] text-sm w-full outline-none focus:border-d transition-all duration-150 inputElement"
         />
+        <LabelForm title=" Họ và Tên" />
         <span className="text-[#cc4242] font-medium text-base">
           {errors?.name?.message || ""}
         </span>
       </div>
-      <div className="flex flex-col gap-x-2">
-        <div className="flex flex-col">
+      <div className="flex flex-col md:flex-row gap-x-2 my-4 gap-y-4">
+        <div className="flex flex-col md:w-full relative text-sm">
           <input
-            type="number"
+            type="text"
             name="phone"
+            placeholder=" "
             {...register("phone")}
-            className="my-2 px-2 py-2 border md:w-[50%] border-[#d1d1d1] outline-none focus:border-d"
-            placeholder="Số điện thoại"
+            className="bg-w px-2 py-2 text-[#333] border border-[#d1d1d1] text-sm w-full outline-none focus:border-d transition-all duration-150 inputElement"
           />
+
+          <LabelForm title="Số điện thoại" />
+
           <span className="text-[#cc4242] font-medium text-base">
             {errors?.phone?.message || ""}
           </span>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col md:w-full relative text-sm">
           <input
             type="email"
             name="email"
+            placeholder=" "
             {...register("email")}
-            className="my-2 px-2 py-2 border md:w-[50%] border-[#d1d1d1] outline-none focus:border-d"
-            placeholder="Địa chỉ email"
+            className="bg-w px-2 py-2 text-[#333] border border-[#d1d1d1] text-sm w-full outline-none focus:border-d transition-all duration-150 inputElement"
           />
+
+          <LabelForm title="Địa chỉ email" />
+
           <span className="text-[#cc4242] font-medium text-base">
             {errors?.email?.message || ""}
           </span>
         </div>
       </div>
-      <div className="flex flex-col gap-x-2">
-        <div className="flex flex-col">
+      <div className="flex flex-col md:flex-row gap-x-2 my-4 gap-y-4">
+        <div className="flex flex-col md:w-full relative text-sm">
           <input
             type="text"
             name="address"
-            {...register("address")}
-            className="my-2 px-2 py-2 border md:w-[50%] border-[#d1d1d1] outline-none focus:border-d"
-            placeholder="Địa chỉ giao hàng"
+            placeholder=" "
+            {...register("phoaddressne")}
+            className="bg-w px-2 py-2 text-[#333] border border-[#d1d1d1] text-sm w-full outline-none focus:border-d transition-all duration-150 inputElement"
           />
+
+          <LabelForm title="Địa chỉ giao hàng" />
+
           <span className="text-[#cc4242] font-medium text-base">
             {errors?.address?.message || ""}
           </span>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col md:w-full relative text-sm">
           <input
             type="text"
             name="wart"
+            placeholder=" "
             {...register("wart")}
-            className="my-2 px-2 py-2 border md:w-[50%] border-[#d1d1d1] outline-none focus:border-d"
-            placeholder="Phường, Xã"
+            className="bg-w px-2 py-2 text-[#333] border border-[#d1d1d1] text-sm w-full outline-none focus:border-d transition-all duration-150 inputElement"
           />
+
+          <LabelForm title="Phường xã" />
+
           <span className="text-[#cc4242] font-medium text-base">
             {errors?.wart?.message || ""}
           </span>
         </div>
       </div>
-      <div className="flex flex-col gap-x-2">
-        <div className="flex flex-col">
+      <div className="flex flex-col md:flex-row gap-x-2 my-4 gap-y-4">
+        <div className="flex flex-col md:w-full relative text-sm">
           <input
             type="text"
             name="city"
+            placeholder=" "
             {...register("city")}
-            className="my-2 px-2 py-2 border md:w-[50%] border-[#d1d1d1] outline-none focus:border-d"
-            placeholder="Thành phố/Huyện"
+            className="bg-w px-2 py-2 text-[#333] border border-[#d1d1d1] text-sm w-full outline-none focus:border-d transition-all duration-150 inputElement"
           />
+
+          <LabelForm title="Thành phố/ Huyện" />
+
           <span className="text-[#cc4242] font-medium text-base">
             {errors?.city?.message || ""}
           </span>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col md:w-full relative text-sm">
           <input
             type="text"
             name="province"
+            placeholder=" "
             {...register("province")}
-            className="my-2 px-2 py-2 border md:w-[50%] border-[#d1d1d1] outline-none focus:border-d"
-            placeholder="Tỉnh"
+            className="bg-w px-2 py-2 text-[#333] border border-[#d1d1d1] text-sm w-full outline-none focus:border-d transition-all duration-150 inputElement"
           />
+
+          <LabelForm title="Tỉnh" />
+
           <span className="text-[#cc4242] font-medium text-base">
             {errors?.province?.message || ""}
           </span>
@@ -138,7 +156,7 @@ const Form = () => {
 
       <button
         type="submit"
-        className="outline-none border-none bg-d py-2 text-w px-8 rounded hover:opacity-80 mt-4"
+        className="outline-none border-none bg-d py-2 text-w px-8 rounded hover:opacity-80 mt-4 md:w-full md:max-w-[184px]"
       >
         Đặt Hàng
       </button>
@@ -146,4 +164,14 @@ const Form = () => {
   );
 };
 
+function LabelForm({ title }) {
+  return (
+    <label
+      htmlFor=""
+      className="absolute top-0 -translate-y-[-50%]  left-[9px] text-sm  text-[#999]   labelFrom pointer-events-none  transition-all duration-150 ;"
+    >
+      {title}
+    </label>
+  );
+}
 export default Form;

@@ -1,35 +1,49 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const CheckOut = () => {
-  const [shipcode, setShipCode] = useState(true);
+  const [checked, setChecked] = useState(1);
 
-  console.log("shipcode", shipcode);
-  const hanldeChang = (e) => {
-    setShipCode(!shipcode);
-  };
+  useEffect(() => {}, [checked]);
+
   return (
-    <div className="flex flex-col mx-auto mt-5 font-bold text-base">
-      <div className="flex items-center my-2">
-        <input
-          type="radio"
-          name="payment"
-          onChange={hanldeChang}
-          checked
-          value={shipcode}
-        />
-        <span className="ml-2">Trả tiền mặt khi nhận hàng</span>
-      </div>
-      {/* <div className="flex items-center my-2">
-        <input
-          type="radio"
-          //   value={shipcode}
-          name="payment"
-          onChange={hanldeChang}
-        />
-        <span className="ml-2">Chuyển khoản bằng ngân hàng</span>
-      </div> */}
+    <div className="flex flex-col  mt-5 font-bold text-base ">
+      {checkout.length > 0 &&
+        checkout.map((item) => (
+          <div key={item.id} className="flex items-center my-2 ml-5">
+            <input
+              type="radio"
+              onChange={() => setChecked(item.id)}
+              checked={checked === item.id}
+            />
+            <span className="ml-2">{item.name}</span>
+          </div>
+        ))}
+
+      {checked === 1 ? (
+        ""
+      ) : (
+        <div className="w-full text-lg font-medium mt-1 md:text-base px-2">
+          <h3 className="">
+            <strong>Chủ tài khoản:</strong> Nguyễn Tiến Dũng
+          </h3>
+          <div className="flex  gap-x-2 mt-2 items-center">
+            <span className="text-sm">Ngân hàng Techcombank:</span>
+            <strong>19036725356019</strong>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
+const checkout = [
+  {
+    id: 1,
+    name: "Trả tiền mặt khi nhận hàng",
+  },
+  {
+    id: 2,
+    name: "Thanh toán bằng thẻ ngân hàng",
+  },
+];
 export default CheckOut;

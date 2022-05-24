@@ -6,9 +6,10 @@ import productData from "../data/products";
 
 const CheckOutPayment = () => {
   const cartCheckOut = useSelector((state) => state.cart.value);
+  console.log(cartCheckOut);
 
   return (
-    <div className="w-full max-w-[1280px] mx-auto px-[10px] md:px-6 lg:px-8  mt-10">
+    <div className="w-full max-w-[1280px] mx-auto px-[10px] md:px-6 lg:px-8  mt-10 flex-col-reverse">
       <div className="flex flex-col ">
         <h2 className="font-bold text-xl mb-4">Danh sách sản phẩm</h2>
         <div className="w-full md:flex items-center gap-x-4 font-bold py-2 border-b  hidden text-base">
@@ -23,12 +24,12 @@ const CheckOutPayment = () => {
             cartCheckOut.map((item, index) => <Cart key={index} item={item} />)}
         </div>
       </div>
-      <div className="flex flex-col mt-10">
-        <div className="flex flex-col">
+      <div className="flex flex-col mt-10 md:flex-row w-full md:gap-x-3 mb-10 md:mt-24 md:mb-32">
+        <div className="flex flex-col md:flex-1">
           <h2 className="text-xl font-semibold">Thông tin thanh toán</h2>
-          <Form />
+          <Form cart={cartCheckOut} />
         </div>
-        <div className="flex flex-col mt-10 md:mt-0">
+        <div className="flex flex-col mt-10 md:mt-0 border border-[#ccc] p-2 md:w-full md:max-w-[300px] lg:max-w-[500px] bg-[#fafafa]">
           <h3 className="text-center text-xl font-semibold border-b px-2 py-2">
             Đơn Hàng của bạn
           </h3>
@@ -54,8 +55,8 @@ function Cart({ item }) {
           </div>
         </div>
       </h3>
-      <p className="md:basis-2/12 hidden md:flex">{item.price}</p>
-      <p className="md:basis-2/12 hidden md:flex">{item.quantity}</p>
+      <p className="md:basis-2/12 hidden md:flex">{item.price}đ</p>
+      <p className="md:basis-2/12 hidden md:flex md:ml-5">{item.quantity}</p>
       <p className="md:basis-2/12 ">{item.price * item.quantity}đ</p>
     </div>
   );
