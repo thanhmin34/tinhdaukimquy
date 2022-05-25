@@ -2,13 +2,24 @@ import React, { useEffect, useState } from "react";
 import { db } from "../firebase/config";
 import { BiMessageDetail } from "react-icons/bi";
 import { MdDelete } from "react-icons/md";
-import { collection, deleteDoc, onSnapshot } from "firebase/firestore";
+import { collection, deleteDoc, getDocs, onSnapshot } from "firebase/firestore";
 const Admin = () => {
   const [products, setProducts] = useState([]);
   const proRef = collection(db, "checkOutProducts");
   const [totalPrice, setTotalPrice] = useState(0);
   useEffect(() => {
-    onSnapshot(proRef, (snapshot) => {
+    // onSnapshot(proRef, (snapshot) => {
+    //   let pro = [];
+    //   snapshot.docs.forEach((doc) => {
+    //     pro.push({
+    //       id: doc.id,
+    //       ...doc.data(),
+    //     });
+    //   });
+    //   setProducts(pro);
+    // });
+
+    getDocs(proRef).then((snapshot) => {
       let pro = [];
       snapshot.docs.forEach((doc) => {
         pro.push({
@@ -18,12 +29,11 @@ const Admin = () => {
       });
       setProducts(pro);
     });
-    console.log(products);
   }, []);
   return (
     <div className="w-full max-w-[1200px] mx-auto mt-10  text-b px-[10px]">
       <h2 className="text-center font-semibold text-2xl ">
-        Danh Sách Đơn Hàng Đã Được Đặt
+        Danh Sách Đơn Hàng
       </h2>
       <div className="flex w-full mx-auto gap-x-5 mt-10 flex-col max-w-[900px]">
         <div className="flex w-full mb-[1px]">
