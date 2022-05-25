@@ -20,7 +20,6 @@ const ProductDetail = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // console.log(product);
   const hanldeChange = (change) => {
     if (change === "+") setNumber(number + 1);
     if (change === "-") {
@@ -36,7 +35,7 @@ const ProductDetail = () => {
       addToCart({
         image: cart.image,
         quantity: number,
-        price: cart.price,
+        price: cart.pricesale,
         name: cart.name,
         title: cart.title,
         slug: cart.slug,

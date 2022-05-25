@@ -3,7 +3,7 @@ import { BiPhone } from "react-icons/bi";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 
 import { FiMail } from "react-icons/fi";
-import { GrFacebookOption } from "react-icons/gr";
+import { AiOutlineUser } from "react-icons/ai";
 import HeaderBottom from "./HeaderBottom";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -28,9 +28,9 @@ const Header = () => {
           </div>
 
           <div className="flex  gap-x-4 ">
-            <Link to="/" className="flex items-center">
-              <span className="text-base leading-[16px] mr-2">Facebook</span>
-              <GrFacebookOption />
+            <Link to="/admin" className="flex items-center">
+              <span className="text-base leading-[16px] mr-2"></span>
+              <AiOutlineUser />
             </Link>
             <Link to="/thanh-toan" className="flex relative ">
               <HiOutlineShoppingBag />

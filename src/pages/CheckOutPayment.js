@@ -6,7 +6,6 @@ import productData from "../data/products";
 
 const CheckOutPayment = () => {
   const cartCheckOut = useSelector((state) => state.cart.value);
-  console.log(cartCheckOut);
 
   return (
     <div className="w-full max-w-[1280px] mx-auto px-[10px] md:px-6 lg:px-8  mt-10 flex-col-reverse">

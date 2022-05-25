@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineMenuUnfold, AiOutlineCaretRight } from "react-icons/ai";
 import ProductItem from "../components/ProductItem";
-import { db } from "../firebase/config";
-import { collection, onSnapshot } from "firebase/firestore";
+
 import productData from "../data/products";
 const Product = () => {
   const [checked, setChecked] = useState(null);
@@ -20,6 +19,7 @@ const Product = () => {
     } else {
       setProduct(proAll);
     }
+    setChecked(slug);
   };
 
   return (
@@ -37,12 +37,15 @@ const Product = () => {
               <h2 className="text-xl font-bold ">Danh mục</h2>
             </div>
             <ul className="flex flex-col gap-y-2 font-medium text-sm">
-              {category.map((item) => (
+              {category.map((item, index) => (
                 <li
                   key={item.id}
                   className="flex items-center gap-x-1 py-2 cursor-pointer "
                 >
-                  <span onClick={() => hanldeClick(item.categorySlug)}>
+                  <span
+                    onClick={() => hanldeClick(item.categorySlug)}
+                    // className={`${item.slug === checked ? "text-d" : ""}`}
+                  >
                     {item.display}
                   </span>
                 </li>

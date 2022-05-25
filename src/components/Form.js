@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { db } from "../firebase/config";
+import { addDoc, collection } from "firebase/firestore";
 
 const schema = yup.object({
   name: yup.string().required("trường này là bắt buộc"),
@@ -19,23 +21,20 @@ const schema = yup.object({
     .min(10),
 });
 const Form = ({ cart }) => {
-  // console.log(cart);
+  console.log(cart);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
-  const onSubmit = (data) => {
-    const pro = [
-      {
-        ...data,
-        products: {
-          ...cart,
-        },
-      },
-    ];
-    // console.log(pro);
+  const onSubmit = async (data) => {
+    const proRef = collection(db, "checkOutProducts");
+    const res = await addDoc(proRef, {
+      ...data,
+      products: [...cart],
+      ship: 20000,
+    });
   };
 
   return (
@@ -50,10 +49,10 @@ const Form = ({ cart }) => {
           name="name"
           placeholder=" "
           {...register("name")}
-          className=" px-2 py-2 border border-[#d1d1d1] text-sm w-full outline-none focus:border-d transition-all duration-150 inputElement"
+          className=" px-2 py-2 border bg-w border-[#d1d1d1] text-sm w-full outline-none focus:border-d transition-all duration-150 inputElement"
         />
         <LabelForm title=" Họ và Tên" />
-        <span className="text-[#cc4242] font-medium text-base">
+        <span className="text-[#cc4242] font-medium text-base ">
           {errors?.name?.message || ""}
         </span>
       </div>
@@ -95,7 +94,7 @@ const Form = ({ cart }) => {
             type="text"
             name="address"
             placeholder=" "
-            {...register("phoaddressne")}
+            {...register("address")}
             className="bg-w px-2 py-2 text-[#333] border border-[#d1d1d1] text-sm w-full outline-none focus:border-d transition-all duration-150 inputElement"
           />
 
@@ -156,7 +155,7 @@ const Form = ({ cart }) => {
 
       <button
         type="submit"
-        className="outline-none border-none bg-d py-2 text-w px-8 rounded hover:opacity-80 mt-4 md:w-full md:max-w-[184px]"
+        className="outline-none border-none bg-d py-2 text-w  px-8 rounded hover:opacity-80 mt-4 md:w-full md:max-w-[184px]"
       >
         Đặt Hàng
       </button>
@@ -168,7 +167,7 @@ function LabelForm({ title }) {
   return (
     <label
       htmlFor=""
-      className="absolute top-0 -translate-y-[-50%]  left-[9px] text-sm  text-[#999]   labelFrom pointer-events-none  transition-all duration-150 ;"
+      className=" absolute top-0 -translate-y-[-50%]  left-[9px] text-sm  text-[#999]   labelFrom pointer-events-none  transition-all duration-150  ;"
     >
       {title}
     </label>

@@ -1,8 +1,8 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
-import CheckOutPayment from "./pages/CheckOutPayment";
-
+const CheckOutPayment = lazy(() => import("./pages/CheckOutPayment"));
+const Admin = lazy(() => import("./Admin/Admin"));
 const Blog = lazy(() => import("./pages/Blog"));
 const Home = lazy(() => import("./pages/Home"));
 const Cart = lazy(() => import("./pages/Cart"));
@@ -26,6 +26,7 @@ function App() {
           <Route path="/thanh-toan" element={<Cart />} />
           <Route path="/checkout" element={<CheckOutPayment />} />
         </Route>
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </Suspense>
   );

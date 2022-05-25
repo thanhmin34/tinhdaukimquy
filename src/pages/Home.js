@@ -15,7 +15,8 @@ const Home = () => {
   const [news, setnews] = useState([]);
   useEffect(() => {
     const saler = pro.filter((e) => e.cart === "yêu thích").slice(0, 8);
-    const other = pro.filter((e) => e.bought === true);
+
+    const other = pro.filter((e) => e.bought === true).slice(0, 8);
     const news = pro.filter((e) => e.cart === "new").slice(0, 8);
 
     setProductSaler(saler);
@@ -31,6 +32,7 @@ const Home = () => {
       clearTimeout();
     };
   }, []);
+  console.log(other);
   return (
     <>
       <div className="w-full mx-auto mb-5">
@@ -92,7 +94,7 @@ const Home = () => {
           <img
             src="/img/slide/slide1.png"
             alt=""
-            className="border-relex-btn"
+            className="border-relex-btn w-full "
           />
         </div>
         <div className="grid grid-cols-2 gap-x-5">
@@ -100,12 +102,12 @@ const Home = () => {
             <img
               src="/img/slide/slide5.png"
               alt=""
-              className="border-relex-btn"
+              className="border-relex-btn w-full"
             />
           </div>
           <div className="flex">
             <img
-              src="/img/slide/slide7.jpeg"
+              src="/img/slide/sli.jpg"
               alt=""
               className="border-relex-btn w-full h-full object-cover"
             />
