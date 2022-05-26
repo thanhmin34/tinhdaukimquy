@@ -1,6 +1,13 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
+const Login = lazy(() => import("./pages/Login"));
+const Post1 = lazy(() => import("./pages/blogD.js/Post1"));
+const Post2 = lazy(() => import("./pages/blogD.js/Post2"));
+const Post3 = lazy(() => import("./pages/blogD.js/Post3"));
+const Post4 = lazy(() => import("./pages/blogD.js/Post4"));
+const Post5 = lazy(() => import("./pages/blogD.js/Post5"));
+
 const CheckOutPayment = lazy(() => import("./pages/CheckOutPayment"));
 const Admin = lazy(() => import("./Admin/Admin"));
 const Blog = lazy(() => import("./pages/Blog"));
@@ -14,7 +21,11 @@ const ProductDetail = lazy(() => import("./pages/ProductDetail"));
 
 function App() {
   return (
-    <Suspense fallback={<>loading...</>}>
+    <Suspense
+      fallback={
+        <div className="w-10 h-10 border-4 border-[#ee4d2d] border-t-w border-b-w rounded-full animate-spin mx-auto mt-10"></div>
+      }
+    >
       <Routes>
         <Route element={<LayOut />}>
           <Route path="/" element={<Home />}></Route>
@@ -25,6 +36,12 @@ function App() {
           <Route path="/bai-viet" element={<Blog />} />
           <Route path="/thanh-toan" element={<Cart />} />
           <Route path="/checkout" element={<CheckOutPayment />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/bai-viet-1" element={<Post1 />} />
+          <Route path="/bai-viet-2" element={<Post2 />} />
+          <Route path="/bai-viet-3" element={<Post3 />} />
+          {/* <Route path="/bai-viet-4" element={<Post4 />} />
+          <Route path="/bai-viet-5" element={<Post5 />} /> */}
         </Route>
         <Route path="/admin" element={<Admin />} />
       </Routes>

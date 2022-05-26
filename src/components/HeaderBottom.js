@@ -146,7 +146,9 @@ const HeaderBottom = () => {
           className="px-2 hidden lg:flex outline-none border-none text-base inputelement "
           placeholder="Tìm kiếm..."
         />
-        <BiSearch />
+        <Link to="/san-pham">
+          <BiSearch />
+        </Link>
       </div>
     </div>
   );

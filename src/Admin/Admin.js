@@ -2,33 +2,25 @@ import React, { useEffect, useState } from "react";
 import { db } from "../firebase/config";
 import { BiMessageDetail } from "react-icons/bi";
 import { MdDelete } from "react-icons/md";
-import { collection, deleteDoc, getDocs, onSnapshot } from "firebase/firestore";
+import { collection, deleteDoc, onSnapshot } from "firebase/firestore";
+const token = 1;
 const Admin = () => {
   const [products, setProducts] = useState([]);
   const proRef = collection(db, "checkOutProducts");
-  const [totalPrice, setTotalPrice] = useState(0);
+  // const [totalPrice, setTotalPrice] = useState(0);
   useEffect(() => {
-    // onSnapshot(proRef, (snapshot) => {
-    //   let pro = [];
-    //   snapshot.docs.forEach((doc) => {
-    //     pro.push({
-    //       id: doc.id,
-    //       ...doc.data(),
-    //     });
-    //   });
-    //   setProducts(pro);
-    // });
-
-    getDocs(proRef).then((snapshot) => {
-      let pro = [];
-      snapshot.docs.forEach((doc) => {
-        pro.push({
-          id: doc.id,
-          ...doc.data(),
+    if (token === 1) {
+      onSnapshot(proRef, (snapshot) => {
+        let pro = [];
+        snapshot.docs.forEach((doc) => {
+          pro.push({
+            id: doc.id,
+            ...doc.data(),
+          });
         });
+        setProducts(pro);
       });
-      setProducts(pro);
-    });
+    }
   }, []);
   return (
     <div className="w-full max-w-[1200px] mx-auto mt-10  text-b px-[10px]">
@@ -49,7 +41,7 @@ const Admin = () => {
               Chi Tiết
             </div>
             <div className=" text-center md:basis-1/12 hidden md:block">
-              Edit
+              Trạng thái
             </div>
           </div>
         </div>
@@ -72,9 +64,14 @@ function InfoItem({ item }) {
     );
   }, [item]);
 
-  const hanldeDelete = async (id) => {
-    // const delRef = await collection(db, "checkOutProducts", id);
-    // await deleteDoc(delRef);
+  const hanldeDelete = async (item) => {
+    console.log(item);
+    try {
+      const colRef = await collection(db, "checkOutProducts", item.id);
+      await deleteDoc(colRef);
+    } catch (err) {
+      console.log(err);
+    }
   };
   const hanldeShowItem = (item) => {
     setShow(true);
@@ -97,7 +94,7 @@ function InfoItem({ item }) {
           </span>
         </div>
         <div className="py-1 px-2 md:py-3 md:basis-1/12  hidden  cursor-pointer border border-[#ccc] text-center md:flex items-center justify-center ">
-          <span onClick={() => hanldeDelete(item.id)}>
+          <span onClick={() => hanldeDelete(item)}>
             <MdDelete />
           </span>
         </div>

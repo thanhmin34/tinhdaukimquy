@@ -28,7 +28,7 @@ const Header = () => {
           </div>
 
           <div className="flex  gap-x-4 ">
-            <Link to="/admin" className="flex items-center">
+            <Link to="/login" className="flex items-center">
               <span className="text-base leading-[16px] mr-2"></span>
               <AiOutlineUser />
             </Link>

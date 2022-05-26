@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { db } from "../firebase/config";
 import { addDoc, collection } from "firebase/firestore";
-
+import emailjs from "emailjs-com";
 const schema = yup.object({
   name: yup.string().required("trường này là bắt buộc"),
   email: yup.string().email().required("trường này là bắt buộc"),
@@ -21,6 +21,7 @@ const schema = yup.object({
     .min(10),
 });
 const Form = ({ cart }) => {
+  const refForm = useRef(null);
   console.log(cart);
   const {
     register,
@@ -35,10 +36,26 @@ const Form = ({ cart }) => {
       products: [...cart],
       ship: 20000,
     });
+    emailjs
+      .sendForm(
+        "service_ulndg36",
+        "template_bxbq6x7",
+        refForm.current,
+        "6GQsse_J_olEZBijY"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
     <form
+      ref={refForm}
       onSubmit={handleSubmit(onSubmit)}
       action=""
       className=" w-full  max-w-[360px] mx-auto md:max-w-[500px] md:mx-0 x2:max-w-[650px]"

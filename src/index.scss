@@ -46,6 +46,12 @@
   overflow: hidden;
   display: -webkit-box;
 }
+.text__over-4 {
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+}
 
 .border-r {
   border-top-right-radius: 4px;
