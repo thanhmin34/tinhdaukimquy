@@ -46,7 +46,7 @@ const ProductDetail = () => {
 
   return (
     <>
-      <div className="w-full max-w-[1280px] px-[15px] md:px-6  xl:px-8 mx-auto mt-10">
+      <div className="w-full max-w-[1280px] px-[15px] md:px-6  xl:px-8 mx-auto mt-10 mb-20">
         <div className="flex flex-col md:grid md:grid-cols-2 md:gap-x-10">
           <div className="flex flex-col lg:flex-row  ">
             <div className=" w-full lg:basis-9/12 ">
@@ -81,7 +81,7 @@ const ProductDetail = () => {
                   +
                 </div>
               </div>
-              <div className="flex items-center gap-x-4 justify-start text-w font-medium text-base">
+              <div className="flex items-center gap-x-4 justify-start text-w font-medium text-base mt-3">
                 <button
                   onClick={() => hanldeAddToCart(pro)}
                   className="bg-d px-4 rounded-sm py-2 border-none outline-none hover:opacity-80"
@@ -90,12 +90,12 @@ const ProductDetail = () => {
                 </button>
                 <Link
                   to="/san-pham"
-                  className="cursor-pointer bg-d px-4 rounded-sm py-2 border-none outline-none hover:opacity-80"
+                  className="cursor-pointer bg-d px-4 rounded-sm py-2 border-none outline-none hover:opacity-80  hidden md:block "
                 >
                   Tiếp Tục Mua Hàng
                 </Link>
               </div>
-              <div className="flex font-medium text-base flex-col">
+              <div className="flex font-medium text-base flex-col mt-5">
                 <ul className="flex gap-x-2">
                   {listIntro.map((item) => (
                     <li
@@ -170,7 +170,7 @@ const ProductDetail = () => {
 
 const listIntro = [
   { id: 1, display: "Giới Thiệu" },
-  { id: 2, display: "Chi Tiết Sản Phẩm" },
+  { id: 2, display: "Chi Tiết " },
   { id: 3, display: "Công Dụng" },
 ];
 export default ProductDetail;

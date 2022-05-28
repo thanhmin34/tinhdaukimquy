@@ -38,10 +38,10 @@ const Form = ({ cart }) => {
     });
     emailjs
       .sendForm(
-        "service_ulndg36",
-        "template_bxbq6x7",
+        "service_uu0bvjr",
+        "template_eepi3mk",
         refForm.current,
-        "6GQsse_J_olEZBijY"
+        "nO9l9kQhyDQX-kvry"
       )
       .then(
         (result) => {
