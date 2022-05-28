@@ -15,6 +15,38 @@ const products = [
       "Công dụng: Hỗ trợ trong điều trị tê thấp, đau nhức xương khớp, khử mùi hôi chân. Hỗ trợ trong thê thao làm phục hồi thư giãn cơ, xương khớp khi vận động quá sức.Hỗ trợ trong xoa bóp thẩm mỹ làm thư giản vòng eo, bụng.",
   },
   {
+    id: 40,
+    title: "Tinh Dầu Tràm Loại 1",
+    price: 244000,
+    pricesale: 232000,
+    sale: 5,
+    cart: "yêu thích",
+    bought: true,
+    image: "/img/image/tram-1-100ml.png",
+    categorySlug: "tinh-dau-tram-1",
+    slug: "tinh-dau-tram-1",
+    name: "hộp",
+    description:
+      "Công dụng: Hỗ trợ trong điều trị tê thấp, đau nhức xương khớp, khử mùi hôi chân. Hỗ trợ trong thê thao làm phục hồi thư giãn cơ, xương khớp khi vận động quá sức.Hỗ trợ trong xoa bóp thẩm mỹ làm thư giản vòng eo, bụng.",
+  },
+
+  {
+    id: 42,
+    title: "Tinh Dầu Tràm 30ml",
+    price: 144000,
+    pricesale: 137000,
+    sale: 5,
+    cart: "new",
+    bought: true,
+    image: "/img/image/tram-30ml.png",
+    categorySlug: "tinh-dau-tram-30ml",
+    slug: "tinh-dau-tram-30ml",
+    name: "hộp",
+    description:
+      "Công dụng: Hỗ trợ trong điều trị tê thấp, đau nhức xương khớp, khử mùi hôi chân. Hỗ trợ trong thê thao làm phục hồi thư giãn cơ, xương khớp khi vận động quá sức.Hỗ trợ trong xoa bóp thẩm mỹ làm thư giản vòng eo, bụng.",
+  },
+
+  {
     id: 2,
     title: "Tinh Dầu Hoa Sen",
     price: 150000,
@@ -112,20 +144,21 @@ const products = [
     description:
       "Công dụng: Giúp bồi bổ cơ thể, đẹp da, trị suy nhược cơ thể, đẹp da, trị suy nhược thần kinh, khỏe gân cốt, giảm cholesterol, chống xơ vỡ động mạch. Đặc biệt là bài thuốc quý trong điều trị rụng tóc và tóc bạc sớm.",
   },
-  // {
-  //   id: 9,
-  //   title: "Tinh Dầu Dừa",
-  //   price: 100000,
-  //   pricesale: 95000,
-  //   sale: 5,
-  //   cart: "new",
-  //   image: "/img/image/tinh-dau-dua.jpg",
-  //   categorySlug: "Tinh Dầu",
-  //   slug: "tinh-dau-dua",
-  //   name: "hộp",
-  //   description:
-  //     "Công dụng: Giúp bồi bổ cơ thể, đẹp da, trị suy nhược cơ thể, đẹp da, trị suy nhược thần kinh, khỏe gân cốt, giảm cholesterol, chống xơ vỡ động mạch. Đặc biệt là bài thuốc quý trong điều trị rụng tóc và tóc bạc sớm.",
-  // },
+  {
+    id: 43,
+    title: "Tinh Dầu Tràm 10ml",
+    price: 44100,
+    pricesale: 42000,
+    sale: 5,
+    cart: "new",
+    bought: true,
+    image: "/img/image/tram-10ml.jpg",
+    categorySlug: "tinh-dau-tram-10ml",
+    slug: "tinh-dau-tram-10ml",
+    name: "hộp",
+    description:
+      "Công dụng: Hỗ trợ trong điều trị tê thấp, đau nhức xương khớp, khử mùi hôi chân. Hỗ trợ trong thê thao làm phục hồi thư giãn cơ, xương khớp khi vận động quá sức.Hỗ trợ trong xoa bóp thẩm mỹ làm thư giản vòng eo, bụng.",
+  },
   {
     id: 10,
     title: "Tinh Dầu Mè Đen",
@@ -467,6 +500,21 @@ const products = [
     bought: true,
     description:
       "Công dụng: Làm thư giản, khử mùi ẩm mốc, sát khuẩn, hương thơm dễ chịu.",
+  },
+  {
+    id: 41,
+    title: "Tinh Dầu Tràm Loại 2",
+    price: 127600,
+    pricesale: 116000,
+    sale: 10,
+    cart: "new",
+    bought: true,
+    image: "/img/image/tram-2-100ml.png",
+    categorySlug: "tinh-dau-tram-2",
+    slug: "tinh-dau-tram-2",
+    name: "hộp",
+    description:
+      "Công dụng: Hỗ trợ trong điều trị tê thấp, đau nhức xương khớp, khử mùi hôi chân. Hỗ trợ trong thê thao làm phục hồi thư giãn cơ, xương khớp khi vận động quá sức.Hỗ trợ trong xoa bóp thẩm mỹ làm thư giản vòng eo, bụng.",
   },
 ];
 

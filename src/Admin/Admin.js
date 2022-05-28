@@ -41,15 +41,15 @@ const Admin = () => {
             <div className=" text-center md:basis-4/12 basis-6/12 ">
               Tên Khách Hàng
             </div>
-            <div className=" text-center md:basis-4/12 basis-4/12">Địa chỉ</div>
+            <div className=" text-center md:basis-3/12 basis-4/12">Địa chỉ</div>
             <div className=" text-center md:basis-2/12 hidden md:block">
               Tổng Tiền
             </div>
             <div className=" text-center md:basis-1/12 basis-2/12">
               Chi Tiết
             </div>
-            <div className=" text-center md:basis-1/12 hidden md:block">
-              Edit
+            <div className=" text-center md:basis-2/12 hidden md:block">
+              Thời gian
             </div>
           </div>
         </div>
@@ -71,6 +71,9 @@ const Admin = () => {
 function InfoItem({ item }) {
   const [total, setTotal] = useState(0);
   const [show, setShow] = useState(false);
+
+  const date = new Date(item?.createAt?.seconds * 1000);
+  const time = new Date(date).toLocaleDateString("vi-VI");
 
   useEffect(() => {
     setTotal(
@@ -96,7 +99,7 @@ function InfoItem({ item }) {
         <div className="py-1 px-2 md:py-3 md:basis-4/12 basis-6/12 border border-[#ccc] ">
           {item?.name}
         </div>
-        <div className="py-1 px-2 md:py-3  basis-4/12 border border-[#ccc]">
+        <div className="py-1 px-2 md:py-3  basis-3/12 border border-[#ccc]">
           {item?.address}
         </div>
         <div className="py-1 px-2 md:py-3 md:basis-2/12 hidden md:block border border-[#ccc]">
@@ -107,10 +110,8 @@ function InfoItem({ item }) {
             <BiMessageDetail />
           </span>
         </div>
-        <div className="py-1 px-2 md:py-3 md:basis-1/12  hidden  cursor-pointer border border-[#ccc] text-center md:flex items-center justify-center ">
-          <span onClick={() => hanldeDelete(item)}>
-            <MdDelete />
-          </span>
+        <div className="py-1 px-2 md:py-3 md:basis-2/12  hidden  cursor-pointer border border-[#ccc] text-center md:flex items-center justify-center ">
+          {time || ""}
         </div>
       </div>
       {show === true ? (

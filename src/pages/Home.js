@@ -32,7 +32,7 @@ const Home = () => {
       clearTimeout();
     };
   }, []);
-  console.log(other);
+
   return (
     <>
       <div className="w-full mx-auto mb-5">

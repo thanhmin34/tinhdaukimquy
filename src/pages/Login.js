@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/config";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -11,14 +12,19 @@ const Login = () => {
   };
   const hanldeSubmit = async (e) => {
     e.preventDefault();
-    const user = await signInWithEmailAndPassword(
-      auth,
-      values.email,
-      values.password
-    );
-
-    if (user && user !== null) {
-      navigate("/admin");
+    try {
+      const user = await signInWithEmailAndPassword(
+        auth,
+        values.email,
+        values.password
+      );
+      toast.error("Đăng nhập thành công", { position: "top-right" });
+      if (user && user !== null) {
+        navigate("/admin");
+      }
+    } catch (err) {
+      toast.error("Tài khoản mật khẩu không đúng", { position: "top-right" });
+      setValues({ email: "", password: "" });
     }
   };
 

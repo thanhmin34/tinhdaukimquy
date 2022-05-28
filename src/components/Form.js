@@ -3,8 +3,14 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { db } from "../firebase/config";
-import { addDoc, collection } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  serverTimestamp,
+  Timestamp,
+} from "firebase/firestore";
 import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
 const schema = yup.object({
   name: yup.string().required("trường này là bắt buộc"),
   email: yup.string().email().required("trường này là bắt buộc"),
@@ -22,35 +28,45 @@ const schema = yup.object({
 });
 const Form = ({ cart }) => {
   const refForm = useRef(null);
-  console.log(cart);
+
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmit = async (data) => {
     const proRef = collection(db, "checkOutProducts");
-    const res = await addDoc(proRef, {
-      ...data,
-      products: [...cart],
-      ship: 20000,
-    });
-    emailjs
-      .sendForm(
-        "service_uu0bvjr",
-        "template_eepi3mk",
-        refForm.current,
-        "nO9l9kQhyDQX-kvry"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    try {
+      const res = await addDoc(proRef, {
+        ...data,
+        products: [...cart],
+        ship: 20000,
+        createAt: serverTimestamp(),
+      });
+      emailjs
+        .sendForm(
+          "service_uu0bvjr",
+          "template_eepi3mk",
+          refForm.current,
+          "nO9l9kQhyDQX-kvry"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+      toast.success("đặt hàng thành công", {
+        position: "top-right",
+      });
+      reset();
+    } catch (err) {
+      toast.error("không thành công", { position: "top-right" });
+    }
   };
 
   return (

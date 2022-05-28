@@ -73,7 +73,7 @@ const Cart = () => {
               <div className="mx-10 border-b mb-4 mt-2"></div>
               <Link
                 to="/checkout"
-                className="cursor-pointer w-full max-w-[320px] md:max-w-full px-2 py-[12px] text-base font-bold bg-d border outline-none rounded-lg text-w gap-x-[2px] hover:opacity-80 items-center justify-center flex"
+                className="cursor-pointer w-full max-w-[162px] md:max-w-full px-2 py-[12px] text-base font-bold bg-d border outline-none rounded-lg text-w gap-x-[2px] hover:opacity-80 items-center justify-center flex"
               >
                 Đặt Hàng
               </Link>
