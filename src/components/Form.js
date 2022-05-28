@@ -75,7 +75,8 @@ const Form = ({ cart }) => {
     <form
       ref={refForm}
       onSubmit={handleSubmit(onSubmit)}
-      action=""
+      action="https://api.emailjs.com/api/v1.0/email/send"
+      method="POST"
       className=" w-full  max-w-[360px] mx-auto md:max-w-[500px] md:mx-0 x2:max-w-[650px]"
     >
       <div className="my-4 relative text-sm  ">
