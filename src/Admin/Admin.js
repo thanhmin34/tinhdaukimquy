@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { db } from "../firebase/config";
+import { auth, db } from "../firebase/config";
 import { BiMessageDetail } from "react-icons/bi";
 import { MdDelete } from "react-icons/md";
 import { collection, deleteDoc, onSnapshot } from "firebase/firestore";
+import { signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 const token = 1;
+
 const Admin = () => {
   const [products, setProducts] = useState([]);
   const proRef = collection(db, "checkOutProducts");
+  const navigate = useNavigate();
   // const [totalPrice, setTotalPrice] = useState(0);
   useEffect(() => {
     if (token === 1) {
@@ -22,6 +26,10 @@ const Admin = () => {
       });
     }
   }, []);
+  const hanldeSignOut = () => {
+    signOut(auth);
+    navigate("/");
+  };
   return (
     <div className="w-full max-w-[1200px] mx-auto mt-10  text-b px-[10px]">
       <h2 className="text-center font-semibold text-2xl ">
@@ -41,7 +49,7 @@ const Admin = () => {
               Chi Tiết
             </div>
             <div className=" text-center md:basis-1/12 hidden md:block">
-              Trạng thái
+              Edit
             </div>
           </div>
         </div>
@@ -50,6 +58,12 @@ const Admin = () => {
             products.map((item) => <InfoItem key={item.id} item={item} />)}
         </div>
       </div>
+      <button
+        onClick={hanldeSignOut}
+        className="mt-10 w-full max-w-[142px] outline-none border border-[#000] text-b text-center ml-10 lg:ml-36 rounded-sm py-2"
+      >
+        Đăng xuất
+      </button>
     </div>
   );
 };

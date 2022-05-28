@@ -41,7 +41,7 @@ const Login = () => {
             className="px-4 py-[10px] border border-[#f1f1f1] outline-none focus:border-d"
           />
           <input
-            type="text"
+            type="password"
             value={values.password}
             name="password"
             onChange={hanldeChangeInput}

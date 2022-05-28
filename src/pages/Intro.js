@@ -19,21 +19,9 @@ const Intro = () => {
         </span>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-x-10 max-w-[1000px] mx-auto my-10 text-c text-xl font-bold">
-        <Banner
-          img="/img/kimquy.jpg"
-          title="Chiết suất"
-          desc="Tinh Dầu Thiên Nhiên"
-        />
-        <Banner
-          img="/img/kimquy.jpg"
-          title="Tinh Dầu"
-          desc="Hoàn Toàn Tự Nhiên"
-        />
-        <Banner
-          img="/img/kimquy.jpg"
-          title="Chất Lượng"
-          desc="Chất Lượng Quốc Tế"
-        />
+        <Banner img="/t3.png" title="Chiết suất" desc="Tinh Dầu Thiên Nhiên" />
+        <Banner img="/t2.png" title="Tinh Dầu" desc="Hoàn Toàn Tự Nhiên" />
+        <Banner img="/t1.png" title="Chất Lượng" desc="Chất Lượng Quốc Tế" />
       </div>
 
       <div className="py-10 bg-[#173c46] text-[15px] text-w">
