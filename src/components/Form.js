@@ -9,7 +9,9 @@ import {
   serverTimestamp,
   Timestamp,
 } from "firebase/firestore";
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
+
 import { toast } from "react-toastify";
 const schema = yup.object({
   name: yup.string().required("trường này là bắt buộc"),
