@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import Slider from "../components/Slider";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Navigation, Autoplay, Pagination } from "swiper";
+import { Link } from "react-router-dom";
 import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
-import Section from "../components/Section";
+import Section, { Section2 } from "../components/Section";
 import productData from "../data/products";
+import { Post2, posts } from "./Blog";
+import { SectionInfo } from "./Intro";
 const Home = () => {
   const pro = productData.getAllProducts();
   const [loading, setLoading] = useState(true);
@@ -23,15 +26,6 @@ const Home = () => {
     setOther(other);
     setnews(news);
   }, [pro]);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-
-    return () => {
-      clearTimeout();
-    };
-  }, []);
 
   return (
     <>
@@ -44,7 +38,6 @@ const Home = () => {
             delay: 5000,
             disableOnInteraction: false,
           }}
-          pagination={{ clickable: true }}
         >
           {slides.length > 0 &&
             slides.map((item) => (
@@ -54,68 +47,49 @@ const Home = () => {
             ))}
         </Swiper>
       </div>
-      {/* <Info />
-      <Banner img="https://tinhdaukimvui.com.vn/wp-content/uploads/2020/04/tinh-dau-tram-125ml.jpg" /> */}
-
+      <div className="flex items-center flex-col">
+        <div className="flex flex-col">
+          <h1 className="text-center text-5xl font-bold  mb-3">Giới Thiệu</h1>
+          <p className="text-lg font-bold text-center px-4">
+            Tinh dầu Tràm Huế Thái Việt – Chất lượng tạo nên sự khác biệt
+          </p>
+        </div>
+        <div className="flex flex-col items-center  md:flex-row w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto gap-5 ">
+          <Info />
+          <Banner img="IMG_7530.png" />
+        </div>
+      </div>
+      <div className="w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto gap-5 md:my-5 lg:my-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 gap-x-5">
+          <div className="flex">
+            <img
+              src="/IMG_7534.jpg"
+              alt=""
+              className="border-relex-btn w-full max-w-[640px]"
+            />
+          </div>
+          <div className="flex">
+            <img
+              src="/IMG_7529.png"
+              alt=""
+              className="border-relex-btn max-w-[640px] w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
       <Section title="Sản Phẩm Bán Chạy" data={other} />
 
-      <div className=" w-full max-w-[1280px] px-[15px] md:px-6  xl:px-8 mx-auto md:my-5  lg:my-16">
-        <Swiper
-          spaceBetween={20}
-          slidesPerView={3}
-          grabCursor={"true"}
-          breakpoints={{
-            320: {
-              minWidth: 320,
-              slidesPerView: 1,
-            },
-            640: {
-              minWidth: 640,
-              slidesPerView: 2,
-            },
-            1000: {
-              minWidth: 1000,
-              slidesPerView: 3,
-            },
-          }}
-        >
-          {slide2.map((item, index) => (
-            <SwiperSlide key={index}>
-              <Slides img={item.img} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+      <Section title="Được Đánh Giá Cao" data={productSaler} />
 
-      <Section title="Đang Giảm Giá" data={productSaler} />
-
-      <div className="w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto gap-5 md:my-5 lg:my-16">
-        <div className="w-full my-5">
-          <img
-            src="/img/slide/slide1.png"
-            alt=""
-            className="border-relex-btn w-full "
-          />
-        </div>
-        <div className="grid grid-cols-2 gap-x-5">
-          <div className="flex">
-            <img
-              src="/img/slide/slide5.png"
-              alt=""
-              className="border-relex-btn w-full"
-            />
-          </div>
-          <div className="flex">
-            <img
-              src="/img/slide/sli.jpg"
-              alt=""
-              className="border-relex-btn w-full h-full object-cover"
-            />
-          </div>
-        </div>
+      <div className=" grid grid-cols-1 md:grid-cols-3 w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto gap-10 md:my-5 lg:my-16">
+        {posts.length > 0 &&
+          posts
+            .slice(0, 3)
+            .map((item, index) => <Post2 key={index} item={item} />)}
       </div>
-      <Section title="Sản Phẩm Mới " data={news} />
-      <div className="mb-20"></div>
+      <div className="w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto gap-10 md:my-5 lg:mt-20 lg:mb-32">
+        <SectionInfo />
+      </div>
     </>
   );
 };
@@ -129,19 +103,15 @@ const slides = [
     id: 2,
     img: "/img/slide/slide2.png",
   },
-  {
-    id: 3,
-    img: "/img/slide/slide4.png",
-  },
 ];
 
-// function Banner({ img }) {
-//   return (
-//     <div className="w-full my-10 md:my-16 xl:my-20">
-//       <img src={img} alt="" />
-//     </div>
-//   );
-// }
+function Banner({ img }) {
+  return (
+    <div className="w-full my-10 md:my-16 xl:my-20">
+      <img src={img} alt="" />
+    </div>
+  );
+}
 
 function Slides({ img }) {
   return (
@@ -149,39 +119,41 @@ function Slides({ img }) {
       <img
         src={img}
         alt=""
-        className="border-relex-btn w-full h-full object-cover"
+        className="border-relex-btn w-full max-w-[500px] h-full object-cover"
       />
     </div>
   );
 }
-// function Info() {
-//   return (
-//     <div className=" w-full max-w-[1280px] mx-auto px-[10px] md:px-4 lg:px-5 xl:px-8 mt-5 text-[#333]">
-//       <h1 className="text-center text-5xl font-bold  mb-3">Giới Thiệu</h1>
-//       <p className="text-lg font-bold text-center px-4">
-//         Tinh dầu Tràm Huế Kim Vui – Chất lượng tạo nên sự khác biệt
-//       </p>
-//       <div className="flex flex-col mt-10  ">
-//         <div className="flex flex-col font-bold text-base">
-//           <span className="text-xl font-bold px-6 text-">Về chúng tôi</span>
-//           <p className="text-justify text-[15px] font-normal mb-4">
-//             Từ thời vua chúa xa xưa, dầu tràm xứ Huế đã đi vào tiềm thức người
-//             Việt như một loại dược liệu xức ngoài da tốt số một, một thứ biệt
-//             dược có thể dùng cho cả làn da non nớt, mẫn cảm nhất như trẻ sơ
-//             sinh. Để gìn giữ tinh túy đó của ông cha, tinh dầu Kim Vui được kiến
-//             tạo từ những năm 2000 với mục tiêu hòa quyện tinh hoa truyền thống
-//             với dòng chảy thời đại để cho ra đời sản phẩm tinh dầu thiên nhiên
-//             chất lượng uy tín nhất.
-//           </p>
+function Info() {
+  return (
+    <div className=" w-full max-w-[1280px] mx-auto px-[10px] md:px-4 lg:px-5 xl:px-8 mt-5 text-[#333]">
+      <div className="flex flex-col mt-10  ">
+        <div className="flex flex-col font-bold text-base">
+          <span className="text-xl font-bold px-6 text-">Về chúng tôi</span>
+          <p className="text-justify text-[15px] font-normal mb-4">
+            Tinh dầu Tràm Huế - Tinh dầu Thái Việt – Chất lượng tạo nên sự khác
+            biệt Về chúng tôi Từ xa xưa, dầu tràm xứ Huế đã đi vào tiềm thức
+            người Việt như một loại dược liệu xức ngoài da tốt số một, một thứ
+            biệt dược có thể dùng cho cả làn da non nớt, mẫn cảm nhất như trẻ sơ
+            sinh. Để gìn giữ tinh túy đó của ông cha, tinh dầu Thái Việt được
+            kiến tạo từ những năm 2000 với mục tiêu hòa quyện tinh hoa truyền
+            thống với dòng chảy thời đại để cho ra đời sản phẩm tinh dầu thiên
+            nhiên chất lượng uy tín nhất. Bên cạnh đó quảng bá sản phẩm truyền
+            thống xa xưa của ông cha ta đến với những người bạn phương xa tại
+            nước ngoài
+          </p>
 
-//           <button className="flex items-center justify-center w-full max-w-[132px] px-4 py-[6px] bg-[#68b943] text-w rounded-2xl">
-//             Xem thêm
-//           </button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
+          <Link
+            to="/gioi-thieu"
+            className="flex items-center cursor-pointer justify-center w-full max-w-[132px] px-4 py-[6px] bg-[#68b943] text-w rounded-2xl"
+          >
+            Xem thêm
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default Home;
 

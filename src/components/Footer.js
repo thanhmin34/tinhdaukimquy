@@ -111,7 +111,7 @@ function Wrapper({ h1, desc }) {
 const desc1 = [
   "Địa Chỉ: Thôn Phước Lộc, xã Lộc Tiến, huyện Phú Lộc, tỉnh Thừa Thiên Huế",
   "Người đại diện: Nguyễn Tiến Dũng",
-  "Số Điện Thoại: 0984 080 155",
+  "Số Điện Thoại: 0828 46 9977",
   "Email: Tinhdauthaiviet@gmail.com",
 ];
 

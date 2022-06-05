@@ -27,11 +27,11 @@ const ProductItem = ({ item }) => {
 
             <span className=" text-[10px] absolute -top-2">đ</span>
           </div>
-          <div className="relative text-[#bbb] ">
+          {/* <div className="relative text-[#bbb] ">
             <span className="line-through text-sm">{item?.price || 500.0}</span>
 
             <span className=" text-[10px] absolute -top-2">đ</span>
-          </div>
+          </div> */}
         </div>
         <button
           onClick={hanldeSlug}

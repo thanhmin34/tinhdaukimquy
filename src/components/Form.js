@@ -1,15 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { db } from "../firebase/config";
-import {
-  addDoc,
-  collection,
-  serverTimestamp,
-  Timestamp,
-} from "firebase/firestore";
-// import emailjs from "emailjs-com";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+
 import emailjs from "@emailjs/browser";
 
 import { toast } from "react-toastify";
@@ -41,7 +36,7 @@ const Form = ({ cart }) => {
   const onSubmit = async (data) => {
     const proRef = collection(db, "checkOutProducts");
     try {
-      const res = await addDoc(proRef, {
+      await addDoc(proRef, {
         ...data,
         products: [...cart],
         ship: 20000,
@@ -75,8 +70,6 @@ const Form = ({ cart }) => {
     <form
       ref={refForm}
       onSubmit={handleSubmit(onSubmit)}
-      action="https://api.emailjs.com/api/v1.0/email/send"
-      method="POST"
       className=" w-full  max-w-[360px] mx-auto md:max-w-[500px] md:mx-0 x2:max-w-[650px]"
     >
       <div className="my-4 relative text-sm  ">

@@ -30,7 +30,7 @@ const Intro = () => {
           <Brand
             title="TÔN CHỈ"
             desc1="KHÁCH HÀNG LÀ TRUNG TÂM"
-            desc2="Với Tinh Dầu Thái Hà, Khách hàng luôn là người đặc biệt, hấp dẫn nhất."
+            desc2="Với Tinh Dầu Thái Việt, Khách hàng luôn là người đặc biệt, hấp dẫn nhất."
           />
           <Brand
             title="THÂN THIỆN"
@@ -40,12 +40,12 @@ const Intro = () => {
           <Brand
             title="SỨC KHOẺ"
             desc1="SỨC KHOẺ LÀ PHƯƠNG CHÂM HÀNG ĐẦU"
-            desc2="Với Thái Hà sức khoẻ khách hàng là phương châm số 1.  "
+            desc2="Với Thái Thái Việt sức khoẻ khách hàng là phương châm số 1.  "
           />
           <Brand
             title="CHẤT LƯỢNG"
             desc1="KHÁCH HÀNG XIN CAM KẾT CHẤT LƯỢNG"
-            desc2="Tinh Dầu Thái Hà xin cam kết chất lượng từng sản phẩm."
+            desc2="Tinh Dầu Thái Thái Việt xin cam kết chất lượng từng sản phẩm."
           />
         </div>
       </div>
@@ -147,39 +147,7 @@ const Intro = () => {
         </div>
       </div>
 
-      <div className="flex flex-col my-10 gap-y-5 md:flex-row md:gap-x-5 md:my-16">
-        <ul className="mt-10 text-base  font-medium flex flex-col gap-y-2 p-3 border border-[#ccc] md:mt-0 md:w-full md:max-w-[400px] lg:max-w-[500px] xl:max-w-[600px]">
-          <h2 className="text-xl font-bold lg:text-center md:mb-5">
-            Mọi thông tin xin liên hệ
-          </h2>
-          <li>
-            <strong className="mr-[px]">Địa chỉ:</strong> Thôn Phước Lộc, xã Lộc
-            Tiến, huyện Phú Lộc, tỉnh Thừa Thiên Huế
-          </li>
-          <li>
-            <strong className="mr-[2px]"> Điện thoại:</strong> 0975 66 18 47
-          </li>
-          <li>
-            <strong className="mr-[4px]"> Facebook:</strong>
-            <a href="https://www.facebook.com/Tinh-d%E1%BA%A7u-tr%C3%A0m-Th%C3%A1i-Vi%E1%BB%87t-109590670612615/">
-              www.facebook.com/tinhdauthaiviet
-            </a>
-          </li>
-          <li>
-            <strong className="mr-[4px]"> Youtube:</strong>
-            <a href="www.facebook.com/tinhdauthaiviet/">
-              www.youtube.com/tinhdauthaiviet
-            </a>
-          </li>
-        </ul>
-        <div className="flex ">
-          <img
-            src="/thaiviet.jpeg"
-            alt=""
-            className="border border-[#bbb] w-full h-full object-cover"
-          />
-        </div>
-      </div>
+      <SectionInfo />
     </div>
   );
 };
@@ -208,6 +176,44 @@ function Brand({ title, desc1, desc2 }) {
         <span>"{desc1}"</span>
       </div>
       <div className="text-justify mx-6 py-2 border-b mt-5">{desc2}</div>
+    </div>
+  );
+}
+
+export function SectionInfo() {
+  return (
+    <div className="flex flex-col my-10 gap-y-5 md:flex-row md:gap-x-5 md:my-16">
+      <ul className="mt-10 text-base lg:p-12  font-medium flex flex-col gap-y-2 p-3 border border-[#ccc] md:mt-0 md:w-full md:max-w-[400px] lg:max-w-[500px] xl:max-w-[600px]">
+        <h2 className="text-xl font-bold lg:text-center md:mb-5">
+          Mọi thông tin xin liên hệ
+        </h2>
+        <li>
+          <strong className="mr-[px]">Địa chỉ:</strong> Thôn Phước Lộc, xã Lộc
+          Tiến, huyện Phú Lộc, tỉnh Thừa Thiên Huế
+        </li>
+        <li>
+          <strong className="mr-[2px]"> Điện thoại:</strong> 0828 46 9977
+        </li>
+        <li>
+          <strong className="mr-[4px]"> Facebook:</strong>
+          <a href="https://www.facebook.com/Tinh-d%E1%BA%A7u-tr%C3%A0m-Th%C3%A1i-Vi%E1%BB%87t-109590670612615/">
+            www.facebook.com/tinhdauthaiviet
+          </a>
+        </li>
+        <li>
+          <strong className="mr-[4px]"> Youtube:</strong>
+          <a href="www.facebook.com/tinhdauthaiviet/">
+            www.youtube.com/tinhdauthaiviet
+          </a>
+        </li>
+      </ul>
+      <div className="flex ">
+        <img
+          src="/thaiviet.jpeg"
+          alt=""
+          className="border border-[#bbb] w-full h-full object-cover"
+        />
+      </div>
     </div>
   );
 }

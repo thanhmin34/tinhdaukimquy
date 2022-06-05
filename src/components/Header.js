@@ -17,7 +17,7 @@ const Header = () => {
           <div className="cursor-pointer flex gap-x-5">
             <div className="flex items-center gap-x-2">
               <BiPhone />
-              <a href="tel:+0984080155">0984 080 155</a>
+              <a href="tel:+0828469977">0828 46 9977</a>
             </div>
             <div className="flex items-center gap-x-2">
               <FiMail />

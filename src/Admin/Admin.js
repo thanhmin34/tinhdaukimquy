@@ -77,19 +77,13 @@ function InfoItem({ item }) {
 
   useEffect(() => {
     setTotal(
-      item.products.reduce((tot, item) => tot + +item.quantity * +item.price, 0)
+      item?.products.reduce(
+        (tot, item) => tot + +item.quantity * +item.price,
+        0
+      )
     );
   }, [item]);
 
-  const hanldeDelete = async (item) => {
-    console.log(item);
-    try {
-      const colRef = await collection(db, "checkOutProducts", item.id);
-      await deleteDoc(colRef);
-    } catch (err) {
-      console.log(err);
-    }
-  };
   const hanldeShowItem = (item) => {
     setShow(true);
   };

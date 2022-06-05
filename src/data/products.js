@@ -2,9 +2,7 @@ const products = [
   {
     id: 1,
     title: "Tinh Dầu Massage",
-    price: 291500,
     pricesale: 265000,
-    sale: 10,
     cart: "yêu thích",
     bought: true,
     image: "/img/image/massage.jpg",
@@ -17,13 +15,11 @@ const products = [
   {
     id: 40,
     title: "Tinh Dầu Tràm Loại 1",
-    price: 244000,
     pricesale: 232000,
-    sale: 5,
     cart: "yêu thích",
     bought: true,
     image: "/img/image/tram-1-100ml.png",
-    categorySlug: "tinh-dau-tram-1",
+    categorySlug: "tinh-dau",
     slug: "tinh-dau-tram-1",
     name: "hộp",
     description:
@@ -33,110 +29,38 @@ const products = [
   {
     id: 42,
     title: "Tinh Dầu Tràm 30ml",
-    price: 144000,
     pricesale: 137000,
-    sale: 5,
-    cart: "new",
+    cart: "mới",
     bought: true,
     image: "/img/image/tram-30ml.png",
-    categorySlug: "tinh-dau-tram-30ml",
+    categorySlug: "tinh-dau",
     slug: "tinh-dau-tram-30ml",
     name: "hộp",
     description:
       "Công dụng: Hỗ trợ trong điều trị tê thấp, đau nhức xương khớp, khử mùi hôi chân. Hỗ trợ trong thê thao làm phục hồi thư giãn cơ, xương khớp khi vận động quá sức.Hỗ trợ trong xoa bóp thẩm mỹ làm thư giản vòng eo, bụng.",
   },
-
   {
     id: 2,
     title: "Tinh Dầu Hoa Sen",
-    price: 150000,
     pricesale: 137000,
-    sale: 10,
+
     bought: true,
-    cart: "new",
+    cart: "mới",
     image: "/img/image/hoa-sen.jpg",
     categorySlug: "tinh-dau",
     slug: "tinh-dau-hoa-sen",
     name: "hộp",
-    description: "tinh dầu Hoa sen",
-  },
-  {
-    id: 3,
-    title: "Tinh Dầu Oải Hương",
-    price: 129000,
-    pricesale: 117000,
-    sale: 10,
-    cart: "new",
-    image: "/img/image/oai-huong.jpg",
-    categorySlug: "tinh-dau",
-    slug: "tinh-dau-oai-huong",
-    name: "hộp",
-    description: "tinh dầu Hoa sen",
-  },
-  {
-    id: 4,
-    title: "Tinh Dầu Bưởi",
-    price: 150000,
-    pricesale: 137000,
-    sale: 10,
-    cart: "new",
-    image: "/img/image/tinh-dau-buoi.jpg",
-    categorySlug: "tinh-dau",
-    slug: "tinh-dau-buoi",
-    name: "hộp",
-    description: "tinh dầu Hoa sen",
-  },
-  {
-    id: 5,
-    title: "Cao Dầu Tràm",
-    price: 106800,
-    pricesale: 89000,
-    sale: 20,
-    bought: true,
-    cart: "yêu thích",
-    image: "/img/image/cao-dau-tram.jpg",
-    categorySlug: "cao-dau",
-    slug: "cao-dau-tram",
-    name: "hộp",
-    description: "tinh dầu Hoa sen",
-  },
-  {
-    id: 6,
-    title: "Cà Gai Leo",
-    price: 400000,
-    pricesale: 385000,
-    sale: 3.8,
-    cart: "new",
-    image: "/img/image/ca-gai-leo.jpg",
-    categorySlug: "khac",
-    bought: true,
-    slug: "ca-gai-leo",
-    name: "hộp",
     description:
-      "Công dụng: Hỗ trợ trong điều trị viêm gan, xơ gan. Giúp tăng cường chức năng gan, giải độc gan, giải rượu, làm hạ men gan.",
+      "Giảm stress, ổn định thần kinh, giúp giảm nhức đầu, chóng mặt và mất ngủ, giảm huyết áp, làm sạch không khí, xông phòng làm gia vị.",
   },
-  {
-    id: 7,
-    title: "Hà Thủ Ô",
-    price: 368000,
-    pricesale: 320000,
-    sale: 15,
-    cart: "new",
-    image: "/img/image/ha-thu-o.jpg",
-    bought: true,
-    categorySlug: "khac",
-    slug: "ha-thu-o",
-    name: "hộp",
-    description:
-      "Công dụng: Giúp bồi bổ cơ thể, đẹp da, trị suy nhược cơ thể, đẹp da, trị suy nhược thần kinh, khỏe gân cốt, giảm cholesterol, chống xơ vỡ động mạch. Đặc biệt là bài thuốc quý trong điều trị rụng tóc và tóc bạc sớm.",
-  },
+
   {
     id: 8,
     title: "Tinh Dầu Dừa",
-    price: 100000,
+
     pricesale: 95000,
-    sale: 5,
-    cart: "new",
+
+    cart: "mới",
     image: "/img/image/tinh-dau-dua.jpg",
     categorySlug: "tinh-dau",
     slug: "tinh-dau-dua",
@@ -147,38 +71,23 @@ const products = [
   {
     id: 43,
     title: "Tinh Dầu Tràm 10ml",
-    price: 44100,
+
     pricesale: 42000,
-    sale: 5,
-    cart: "new",
+
+    cart: "mới",
     bought: true,
     image: "/img/image/tram-10ml.jpg",
-    categorySlug: "tinh-dau-tram-10ml",
+    categorySlug: "tinh-dau",
     slug: "tinh-dau-tram-10ml",
     name: "hộp",
     description:
       "Công dụng: Hỗ trợ trong điều trị tê thấp, đau nhức xương khớp, khử mùi hôi chân. Hỗ trợ trong thê thao làm phục hồi thư giãn cơ, xương khớp khi vận động quá sức.Hỗ trợ trong xoa bóp thẩm mỹ làm thư giản vòng eo, bụng.",
   },
-  {
-    id: 10,
-    title: "Tinh Dầu Mè Đen",
-    price: 137000,
-    pricesale: 130000,
-    sale: 5,
-    cart: "new",
-    image: "/img/image/tinh-dau-me-den.jpg",
-    categorySlug: "tinh-dau",
-    slug: "tinh-dau-me-den",
-    name: "hộp",
-    description:
-      "Công dụng: Giúp nhuận tràng, giảm táo bón, tăng cường sức đề kháng, bổ sung chất sắt, tớ cho hệ tiêu hóa; tiêu hủy các loại giun sán thừa trong trường ruột, lọc máu. Bồi bổ sinh lực, khí huyết, chống viêm phế quản, chống nám, sạm da, làm mịn da và đẹp da. Tốt cho phụ nữ có thai, tuổi dậy thì, những người thiếu máu, phụ nữ sau sinh, phụ nữ bị rong kinh.",
-  },
+
   {
     id: 11,
     title: "Tinh Dầu Treo Xe Hoa Hồng",
-    price: 137000,
     pricesale: 130000,
-    sale: 5,
     bought: true,
     cart: "yêu thích",
     image: "/img/image/tinh-dau-treo-xe-hoa-hong.jpg",
@@ -188,12 +97,153 @@ const products = [
     description:
       "Công dụng: Khử mùi, thanh lọc không khí; kháng khuẩn, hương thơm dễ chịu, giúp tinh thần thư giãn, tỉnh táo, giảm mệt mỏi và giảm say xe. Đuỗi muỗi và côn trùng.",
   },
+  // data start new
+  {
+    id: 100,
+    title: "Tinh dầu xả chanh 100ml",
+    pricesale: 240000,
+    bought: true,
+    cart: "yêu thích",
+    image: "/img/image/tinh-dau-chanh-sa-100.png",
+    categorySlug: "tinh-dau",
+    slug: "tinh-dau-chanh-xa-100ml",
+    name: "hộp",
+    description:
+      "Có tác dụng sát khuẩn, khử mùi, trị cảm lạnh, ho, cảm cúm, đau đầu, đuổi muỗi, côn trùng, trị lạnh bụng, khắc phục da nhờn, trị hôi nách,…",
+  },
+  {
+    id: 101,
+    title: "Tinh dầu xả chanh 25ml",
+    pricesale: 100000,
+
+    cart: "mới",
+    image: "/img/image/tinh-1.jpg",
+    categorySlug: "tinh-dau",
+    slug: "tinh-dau-chanh-xa-10ml",
+    name: "hộp",
+    description:
+      "Có tác dụng sát khuẩn, khử mùi, trị cảm lạnh, ho, cảm cúm, đau đầu, đuổi muỗi, côn trùng, trị lạnh bụng, khắc phục da nhờn, trị hôi nách,…",
+  },
+  {
+    id: 102,
+    title: "Cao Tràm 15gr",
+    pricesale: 87000,
+    cart: "mới",
+    image: "/img/image/cao-dau-tram-15.png",
+    categorySlug: "cao-dau",
+    slug: "cao-tram-15gr",
+    name: "hộp",
+    description:
+      "Ngăn ngừa cảm lạnh, nhức đầu, ho hen, viêm phổi, sổ mũi, trị dị ứng da, thấp khớp, nhức xương, đau dây thần kinh, ứ huyết sau sinh, tiêu hóa kém,…",
+  },
+  {
+    id: 103,
+    title: "Cao Tràm 8gr",
+    pricesale: 45000,
+    cart: "mới",
+    image: "/img/image/cao-dau-tram.jpg",
+    categorySlug: "cao-dau",
+    slug: "cao-tram-8gr",
+    name: "hộp",
+    description:
+      "Ngăn ngừa cảm lạnh, nhức đầu, ho hen, viêm phổi, sổ mũi, trị dị ứng da, thấp khớp, nhức xương, đau dây thần kinh, ứ huyết sau sinh, tiêu hóa kém,…",
+  },
+  {
+    id: 104,
+    title: "Nước hoa hồng",
+    pricesale: 168000,
+    cart: "mới",
+    image: "/img/image/nuoc-hoa-hong.png",
+    categorySlug: "khac",
+    slug: "nuoc-hoa-hong",
+    name: "hộp",
+    description:
+      "Kháng khuẩn nhẹ, làm sạch các chất bụi bẩn,  các chất bả nhờn, bám trên da, làm se khít lỗ chân lông, tạo nên sự mềm mại, cân bằng độ đàn hồi cho da, mang lại cho bạn sự sảng khoái nhẹ nhàn dễ chịu, giúp giữ",
+  },
+
+  // {
+  //   id: 105,
+  //   title: "Tinh Dầu Vitamin",
+  //   pricesale: 168000,
+  //   cart: "mới",
+  //   image: "/img/image/tinh-1.jpg",
+  //   categorySlug: "khac",
+  //   slug: "nuoc-hoa-hong",
+  //   name: "hộp",
+  //   description:
+  //     "Kháng khuẩn nhẹ, làm sạch các chất bụi bẩn,  các chất bả nhờn, bám trên da, làm se khít lỗ chân lông, tạo nên sự mềm mại, cân bằng độ đàn hồi cho da, mang lại cho bạn sự sảng khoái nhẹ nhàn dễ chịu, giúp giữ",
+  // },
+  {
+    id: 106,
+    title: "Tinh dầu quế 100ml",
+    pricesale: 210000,
+    cart: "mới",
+    image: "/img/image/tinh-dau-que-100.png",
+    categorySlug: "tinh-dau",
+    slug: "tinh-dau-que-100ml",
+    name: "hộp",
+    description:
+      "Giảm lượng đường trong máu, giúp điều trị  bệnh tiểu đường, trợ giúp tiêu hóa, hạn chế tiêu chảy, làm tăng sức đề kháng do bị cảm lạnh, giúp giảm cholesterol, giảm stress, giảm cân, khử mùi hôi tanh, thanh lọc không khí, chống buồn nôn, long đàm dễ thở, chống chuột rút.",
+  },
+  {
+    id: 107,
+    title: "Tinh dầu quế 25ml",
+    pricesale: 100000,
+    cart: "mới",
+    image: "/img/image/tinh-1.jpg",
+    categorySlug: "tinh-dau",
+    slug: "tinh-dau-que-25ml",
+    name: "hộp",
+    description:
+      "Giảm lượng đường trong máu, giúp điều trị  bệnh tiểu đường, trợ giúp tiêu hóa, hạn chế tiêu chảy, làm tăng sức đề kháng do bị cảm lạnh, giúp giảm cholesterol, giảm stress, giảm cân, khử mùi hôi tanh, thanh lọc không khí, chống buồn nôn, long đàm dễ thở, chống chuột rút.",
+  },
+  {
+    id: 107,
+    title: "Tinh dầu Sả",
+    pricesale: 100000,
+    cart: "mới",
+    image: "/img/image/tinh-dau-sa.png",
+    categorySlug: "tinh-dau",
+    slug: "tinh-dau-sa",
+    name: "hộp",
+    description:
+      "Xua đuổi muỗi, côn trùng và các loài bò sát, xua tan khí độc, gia vị bữa sáng, sát trùng làm lành vết thương, ngừa nấm da. Xông hơi giảm cân giảm đau nhức chân tay. Phục hồi sức khỏe sau khi vận động mạnh.",
+  },
+  {
+    id: 108,
+    title: "Tinh Dầu Oải Hương",
+
+    pricesale: 137000,
+
+    cart: "mới",
+    image: "/img/image/oai-huong.png",
+    categorySlug: "tinh-dau",
+    slug: "tinh-dau-oai-huong",
+    name: "hộp",
+    description:
+      "Giảm stress, ổn định thần kinh, giúp giảm nhức đầu, chóng mặt và mất ngủ, giảm huyết áp, làm sạch không khí, xông phòng làm gia vị.",
+  },
+  {
+    id: 109,
+    title: "Tinh Dầu Bưởi",
+
+    pricesale: 137000,
+
+    cart: "mới",
+    image: "/img/image/tinh-dau-buoi.png",
+    categorySlug: "tinh-dau",
+    slug: "tinh-dau-buoi",
+    name: "hộp",
+    description:
+      "Giảm stress, ổn định thần kinh, giúp giảm nhức đầu, chóng mặt và mất ngủ, giảm huyết áp, làm sạch không khí, xông phòng làm gia vị.",
+  },
+  // data start end
   {
     id: 12,
     title: "Tinh Dầu Treo Xe Hoa Lài",
-    price: 137000,
+
     pricesale: 130000,
-    sale: 5,
+
     cart: "yêu thích",
     image: "/img/image/tinh-dau-treo-xe-hoa-lai.jpg",
     categorySlug: "tinh-dau-treo",
@@ -205,10 +255,10 @@ const products = [
   {
     id: 13,
     title: "Tinh Dầu Treo Xe Ngọc Lan Tây",
-    price: 116000,
+
     pricesale: 110000,
-    sale: 4,
-    cart: "new",
+
+    cart: "mới",
     image: "/img/image/tinh-dau-treo-xe-hoa-ngoc-lan-tay.jpg",
     categorySlug: "tinh-dau-treo",
     slug: "tinh-dau-treo-xe-hoa-ngoc-lan-tay",
@@ -220,10 +270,10 @@ const products = [
   {
     id: 14,
     title: "Tinh Dầu Treo Xe Oải Hương",
-    price: 116000,
+
     pricesale: 110000,
-    sale: 5,
-    cart: "new",
+
+    cart: "mới",
     image: "/img/image/tinh-dau-treo-xe-oai-huong.jpg",
     categorySlug: "tinh-dau-treo",
     slug: "tinh-dau-treo-xe-oai-huong",
@@ -234,10 +284,10 @@ const products = [
   {
     id: 15,
     title: "Tinh Dầu Treo Xe Quế",
-    price: 100000,
+
     pricesale: 95000,
-    sale: 5,
-    cart: "new",
+
+    cart: "mới",
     image: "/img/image/tinh-dau-treo-xe-que.jpg",
     categorySlug: "tinh-dau-treo",
     slug: "tinh-dau-treo-xe-que",
@@ -248,10 +298,10 @@ const products = [
   {
     id: 16,
     title: "Tinh Dầu Treo Xe Sả Chanh",
-    price: 79000,
+
     pricesale: 75000,
-    sale: 2.5,
-    cart: "new",
+
+    cart: "mới",
     image: "/img/image/tinh-dau-treo-xe-sa-chanh.jpg",
     categorySlug: "tinh-dau-treo",
     slug: "tinh-dau-treo-xe-sa-chanh",
@@ -262,10 +312,10 @@ const products = [
   {
     id: 17,
     title: "Tinh Dầu Ngãi Cứu",
-    price: 137000,
+
     pricesale: 130000,
-    sale: 4.8,
-    cart: "new",
+
+    cart: "mới",
     image: "/img/image/ngai-cuu.jpeg",
     categorySlug: "tinh-dau",
     slug: "ngai-cuu",
@@ -277,10 +327,10 @@ const products = [
   {
     id: 18,
     title: "Trị Đau Răng Gia Truyền",
-    price: 100000,
+
     pricesale: 95000,
-    sale: 5,
-    cart: "new",
+
+    cart: "mới",
     image: "/img/image/tinh-dau-tri-dau-rang.jpg",
     categorySlug: "khac",
     slug: "tinh-dau-tri-dau-rang",
@@ -291,10 +341,10 @@ const products = [
   {
     id: 19,
     title: "Trị Gút",
-    price: 100000,
+
     pricesale: 95000,
-    sale: 5,
-    cart: "new",
+
+    cart: "mới",
     image: "/img/image/tri-gut.jpg",
     categorySlug: "khac",
     slug: "tri-gut",
@@ -302,54 +352,13 @@ const products = [
     description:
       "Công dụng: Giải tỏa các độc tố tích tụ, ứ đọng ở các khớp, thanh nhiệt trừ phong, thông kinh hoạt huyết, xua tan các cơn đau nhức ở các xương khớp, giúp lợi gân cốt, hạn chế các bệnh teo cơ, chống tê mỏi tay chân.",
   },
-  {
-    id: 20,
-    title: "Trị Mụn Gia Truyền",
-    price: 210000,
-    pricesale: 200000,
-    sale: 5,
-    cart: "yêu thích",
-    image: "/img/image/tri-mun.jpg",
-    categorySlug: "khac",
-    slug: "tri-mun",
-    name: "hộp",
-    description:
-      "Công dụng: Kháng khuẩn cho toàn bộ làn da bị viêm nhiễm, không cho các vi khuẩn có cơ hội phát tán lây lan thêm, ngừa các tạp khuẩn từ môi trường xung quanh, kịp thời chấm dứt tình trạng biến chứng mụn. Loại bỏ và cân bằng chất nhờn trên da, tạo độ thông thoáng từ các lỗ chân lông không để cho mầm vi khuẩn hình thành bộc phát, cô lập và rút khô các nhân mụn rồi tự phân hủy. Bổ sung một lượng vitamin cần thiết giúp kích thích sản sinh một số tế bào mới để bổ sung cho sự hư hại của làn da do mụn, làm liền, làm mờ các vết sẹo do mụn để lại đồng thời ngăn ngừa sự tái phát của các loại mụn.",
-  },
-  // {
-  //   id: 33,
-  //   title: "Trị Nám Tàn Nhang Gia Truyền",
-  //   price: 210000,
-  //   pricesale: 200000,
-  //   sale: 5,
-  //   cart: "new",
-  //   image: "/img/image/tri-nam.jpg",
-  //   categorySlug: "khac",
-  //   slug: "tri-nam",
-  //   name: "hộp",
-  //   description:
-  //     "Công dụng: Giải tỏa các độc tố tích tụ, ứ đọng ở các khớp, thanh nhiệt trừ phong, thông kinh hoạt huyết, xua tan các cơn đau nhức ở các xương khớp, giúp lợi gân cốt, hạn chế các bệnh teo cơ, chống tê mỏi tay chân.",
-  // },
-  {
-    id: 21,
-    title: "Trị Nám Tàn Nhang Gia Truyền",
-    price: 210000,
-    pricesale: 200000,
-    sale: 5,
-    cart: "new",
-    image: "/img/image/tri-nam.jpg",
-    categorySlug: "khac",
-    slug: "tri-nam",
-    name: "hộp",
-    description:
-      "Công dụng: Kháng khuẩn cho toàn bộ làn da bị viêm nhiễm, không cho các vi khuẩn có cơ hội phát tán lây lan thêm, ngừa các tạp khuẩn từ môi trường xung quanh, kịp thời chấm dứt tình trạng biến chứng mụn. Loại bỏ và cân bằng chất nhờn trên da, tạo độ thông thoáng từ các lỗ chân lông không để cho mầm vi khuẩn hình thành bộc phát, cô lập và rút khô các nhân mụn rồi tự phân hủy. Bổ sung một lượng vitamin cần thiết giúp kích thích sản sinh một số tế bào mới để bổ sung cho sự hư hại của làn da do mụn, làm liền, làm mờ các vết sẹo do mụn để lại đồng thời ngăn ngừa sự tái phát của các loại mụn.",
-  },
+
   {
     id: 22,
     title: "Trị Sâu Răng",
-    price: 63000,
+
     pricesale: 60000,
-    sale: 5,
+
     cart: "yêu thích",
     image: "/img/image/tri-sau-rang.jpg",
     categorySlug: "khac",
@@ -362,10 +371,10 @@ const products = [
   {
     id: 23,
     title: "Trị Viêm Xoang",
-    price: 137000,
+
     pricesale: 13000,
-    sale: 5,
-    cart: "new",
+
+    cart: "mới",
     image: "/img/image/tri-viem-xoang.jpg",
     categorySlug: "khac",
     slug: "tri-viem-xoang",
@@ -376,9 +385,9 @@ const products = [
   {
     id: 24,
     title: "Vitamin Dưỡng Da",
-    price: 204000,
+
     pricesale: 170000,
-    sale: 20,
+
     cart: "yêu tích",
     image: "/img/image/vitamin-duong-da.jpg",
     categorySlug: "vitamin",
@@ -390,9 +399,8 @@ const products = [
   {
     id: 25,
     title: "Vitamin Dưỡng thể",
-    price: 3160000,
+
     pricesale: 300000,
-    sale: 5,
 
     image: "/img/image/vitamin-duong-the.jpg",
     categorySlug: "vitamin",
@@ -404,10 +412,10 @@ const products = [
   {
     id: 26,
     title: "Xịt Phòng Bưởi",
-    price: 143000,
+
     pricesale: 130000,
-    sale: 10,
-    cart: "new",
+
+    cart: "mới",
     image: "/img/image/xit-phong-buoi.jpg",
     categorySlug: "xit-phong",
     slug: "xit-phong-buoi",
@@ -418,9 +426,9 @@ const products = [
   {
     id: 27,
     title: "Xịt Phòng Hoa Lài",
-    price: 143000,
+
     pricesale: 130000,
-    sale: 10,
+
     cart: "yêu thích",
     image: "/img/image/xit-phong-hoa-lai.jpg",
     categorySlug: "xit-phong",
@@ -432,10 +440,10 @@ const products = [
   {
     id: 28,
     title: "Xịt Phòng Hoa Sen",
-    price: 143000,
+
     pricesale: 130000,
     bought: true,
-    sale: 10,
+
     cart: "yêu thích",
     image: "/img/image/xit-phong-hoa-sen.jpg",
     categorySlug: "xit-phong",
@@ -447,10 +455,10 @@ const products = [
   {
     id: 29,
     title: "Xịt Phòng Oải Hương",
-    price: 143000,
+
     pricesale: 130000,
-    sale: 10,
-    cart: "new",
+
+    cart: "mới",
     image: "/img/image/xit-phong-oai-huong.jpg",
     categorySlug: "xit-phong",
     slug: "xit-phong-oai-huong",
@@ -461,9 +469,8 @@ const products = [
   {
     id: 30,
     title: "Xịt Phòng Quế",
-    price: 143000,
+
     pricesale: 130000,
-    sale: 10,
 
     image: "/img/image/xit-phong-que.jpg",
     categorySlug: "xit-phong",
@@ -475,10 +482,10 @@ const products = [
   {
     id: 31,
     title: "Xịt Phòng Sả Chanh",
-    price: 143000,
+
     pricesale: 130000,
-    sale: 10,
-    cart: "new",
+
+    cart: "mới",
     image: "/img/image/xit-phong-xa-chanh.jpg",
     categorySlug: "xit-phong",
     slug: "xit-phong-xa-chanh",
@@ -489,9 +496,8 @@ const products = [
   {
     id: 32,
     title: "Xịt Phòng Trầm",
-    price: 143000,
+
     pricesale: 130000,
-    sale: 10,
 
     image: "/img/image/xit-phong-tram.jpeg",
     categorySlug: "xit-phong",
@@ -504,13 +510,13 @@ const products = [
   {
     id: 41,
     title: "Tinh Dầu Tràm Loại 2",
-    price: 127600,
+
     pricesale: 116000,
-    sale: 10,
-    cart: "new",
+
+    cart: "mới",
     bought: true,
     image: "/img/image/tram-2-100ml.png",
-    categorySlug: "tinh-dau-tram-2",
+    categorySlug: "tinh-dau",
     slug: "tinh-dau-tram-2",
     name: "hộp",
     description:

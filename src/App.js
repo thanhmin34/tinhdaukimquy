@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
+const BlogDetail = lazy(() => import("./pages/BlogDetail"));
 const Login = lazy(() => import("./pages/Login"));
 const Post1 = lazy(() => import("./pages/blogD.js/Post1"));
 const Post2 = lazy(() => import("./pages/blogD.js/Post2"));
@@ -34,14 +35,15 @@ function App() {
           <Route path="/lien-he" element={<Contact />} />
           <Route path="/gioi-thieu" element={<Intro />} />
           <Route path="/bai-viet" element={<Blog />} />
+          <Route path="/bai-viet/:slug" element={<BlogDetail />} />
           <Route path="/thanh-toan" element={<Cart />} />
           <Route path="/checkout" element={<CheckOutPayment />} />
           <Route path="/login" element={<Login />} />
           <Route path="/bai-viet-1" element={<Post1 />} />
           <Route path="/bai-viet-2" element={<Post2 />} />
           <Route path="/bai-viet-3" element={<Post3 />} />
-          {/* <Route path="/bai-viet-4" element={<Post4 />} />
-          <Route path="/bai-viet-5" element={<Post5 />} /> */}
+          <Route path="/bai-viet-4" element={<Post4 />} />
+          <Route path="/bai-viet-5" element={<Post5 />} />
         </Route>
         <Route path="/admin" element={<Admin />} />
       </Routes>
