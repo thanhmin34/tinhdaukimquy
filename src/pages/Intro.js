@@ -136,13 +136,13 @@ const Intro = () => {
               Sản phẩm tinh dầu tràm Huế nguyên chất của công ty đã được cấp
               chứng nhận đạt chuẩn ISO 9001-2015.
             </span>
-            <div className=" hidden lg:flex">
-              <img src="img/luachon.jpg" alt="" />
-            </div>
+            {/* <div className=" hidden lg:flex">
+              <img src="/img/luachon.jpg" alt="" />
+            </div> */}
           </div>
 
           <div className="flex flex-col ">
-            <img src="/img/iso.jpg" alt="" className="p-5 md:p-3 " />
+            <img src="/7530.png" alt="" className="p-5 md:p-3 w-full " />
           </div>
         </div>
       </div>

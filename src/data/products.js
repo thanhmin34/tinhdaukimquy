@@ -186,6 +186,17 @@ const products = [
       "Giảm lượng đường trong máu, giúp điều trị  bệnh tiểu đường, trợ giúp tiêu hóa, hạn chế tiêu chảy, làm tăng sức đề kháng do bị cảm lạnh, giúp giảm cholesterol, giảm stress, giảm cân, khử mùi hôi tanh, thanh lọc không khí, chống buồn nôn, long đàm dễ thở, chống chuột rút.",
   },
   {
+    id: 107,
+    title: "Đèn xông tinh dầu ",
+    pricesale: 350000,
+    cart: "mới",
+    image: "/img/image/den-xong-tinh-dau.png",
+    categorySlug: "khac",
+    slug: "den-xong-tinh-dau",
+    name: "hộp",
+    description: "công cụ hữu ích cho việc xông hơi",
+  },
+  {
     id: 117,
     title: "Tinh dầu Sả",
     pricesale: 100000,
