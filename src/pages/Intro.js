@@ -142,7 +142,7 @@ const Intro = () => {
           </div>
 
           <div className="flex flex-col ">
-            <img src="/7530.png" alt="" className="p-5 md:p-3 w-full " />
+            <img src="/chuong8.png" alt="" className="p-5 md:p-3 w-full " />
           </div>
         </div>
       </div>

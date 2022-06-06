@@ -58,7 +58,7 @@ const Home = () => {
         </div>
         <div className="flex flex-col items-center  md:flex-row w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto gap-5 ">
           <Info />
-          <Banner img="/7530.png" />
+          <Banner img="/chuong7.png" />
         </div>
       </div>
       <div className="w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto gap-5 my-5 md:my-5 lg:my-16">
@@ -80,7 +80,10 @@ const Home = () => {
           </div>
           <div className="flex flex-col gap-2 md:gap-5 items-center justify-center px-5 text-center">
             <img src="/icon3.png" alt="" className="w-[60px]" />
-            <span>Có hương thơm diệu nhẹ xua đuổi các côn trùng, muỗi</span>
+            <span>
+              Có hương thơm diệu nhẹ thơm mát giúp xua đuổi các côn trùng, muỗi
+              hiệu quả
+            </span>
           </div>
           <div className="flex flex-col gap-2 md:gap-5 items-center justify-center px-5 text-center">
             <img src="/icon4.png" alt="" className="w-[60px]" />
@@ -96,14 +99,14 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 gap-x-5">
           <div className="flex pt-[54%] relative">
             <img
-              src="/7534.jpg"
+              src="/chuong8.jpg"
               alt="tinh dầu thái việt"
               className="border-relex-btn w-full h-full absolute top-0 left-0 right-0 object-cover"
             />
           </div>
           <div className="flex pt-[54%] relative">
             <img
-              src="/7529.png"
+              src="/chuong9.png"
               alt="tinh dầu thái việt"
               className="border-relex-btn w-full h-full absolute top-0 left-0 right-0  object-cover"
             />
