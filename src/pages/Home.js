@@ -58,7 +58,7 @@ const Home = () => {
         </div>
         <div className="flex flex-col items-center  md:flex-row w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto gap-5 ">
           <Info />
-          <Banner img="/chuong7.png" />
+          <Banner img="/chuong7.PNG" />
         </div>
       </div>
       <div className="w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto gap-5 my-5 md:my-5 lg:my-16">
