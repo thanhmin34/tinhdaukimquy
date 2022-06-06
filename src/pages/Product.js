@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { AiOutlineMenuUnfold, AiOutlineCaretRight } from "react-icons/ai";
+import { AiOutlineMenuUnfold } from "react-icons/ai";
 import ProductItem from "../components/ProductItem";
 
 import productData from "../data/products";
@@ -12,6 +12,9 @@ const Product = () => {
   useEffect(() => {
     setProduct(proAll);
   }, [proAll]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const hanldeClick = (slug) => {
     if (slug) {
       const categ = proAll.filter((item) => item.categorySlug === slug);

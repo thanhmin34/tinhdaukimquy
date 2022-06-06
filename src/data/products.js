@@ -111,19 +111,7 @@ const products = [
     description:
       "Có tác dụng sát khuẩn, khử mùi, trị cảm lạnh, ho, cảm cúm, đau đầu, đuổi muỗi, côn trùng, trị lạnh bụng, khắc phục da nhờn, trị hôi nách,…",
   },
-  {
-    id: 101,
-    title: "Tinh dầu xả chanh 25ml",
-    pricesale: 100000,
 
-    cart: "mới",
-    image: "/img/image/tinh-1.jpg",
-    categorySlug: "tinh-dau",
-    slug: "tinh-dau-chanh-xa-10ml",
-    name: "hộp",
-    description:
-      "Có tác dụng sát khuẩn, khử mùi, trị cảm lạnh, ho, cảm cúm, đau đầu, đuổi muỗi, côn trùng, trị lạnh bụng, khắc phục da nhờn, trị hôi nách,…",
-  },
   {
     id: 102,
     title: "Cao Tràm 15gr",
@@ -178,7 +166,7 @@ const products = [
     title: "Tinh dầu quế 100ml",
     pricesale: 210000,
     cart: "mới",
-    image: "/img/image/tinh-dau-que-100.png",
+    image: "/img/image/tinh-dau-que-100ml.png",
     categorySlug: "tinh-dau",
     slug: "tinh-dau-que-100ml",
     name: "hộp",
@@ -190,7 +178,7 @@ const products = [
     title: "Tinh dầu quế 25ml",
     pricesale: 100000,
     cart: "mới",
-    image: "/img/image/tinh-1.jpg",
+    image: "/img/image/tinh-dau-que-25ml.png",
     categorySlug: "tinh-dau",
     slug: "tinh-dau-que-25ml",
     name: "hộp",
@@ -198,7 +186,7 @@ const products = [
       "Giảm lượng đường trong máu, giúp điều trị  bệnh tiểu đường, trợ giúp tiêu hóa, hạn chế tiêu chảy, làm tăng sức đề kháng do bị cảm lạnh, giúp giảm cholesterol, giảm stress, giảm cân, khử mùi hôi tanh, thanh lọc không khí, chống buồn nôn, long đàm dễ thở, chống chuột rút.",
   },
   {
-    id: 107,
+    id: 117,
     title: "Tinh dầu Sả",
     pricesale: 100000,
     cart: "mới",
@@ -236,6 +224,19 @@ const products = [
     name: "hộp",
     description:
       "Giảm stress, ổn định thần kinh, giúp giảm nhức đầu, chóng mặt và mất ngủ, giảm huyết áp, làm sạch không khí, xông phòng làm gia vị.",
+  },
+  {
+    id: 101,
+    title: "Tinh dầu xả chanh 25ml",
+    pricesale: 100000,
+
+    cart: "mới",
+    image: "/img/image/tinh-dau-chanh-sa-100.png",
+    categorySlug: "tinh-dau",
+    slug: "tinh-dau-chanh-xa-10ml",
+    name: "hộp",
+    description:
+      "Có tác dụng sát khuẩn, khử mùi, trị cảm lạnh, ho, cảm cúm, đau đầu, đuổi muỗi, côn trùng, trị lạnh bụng, khắc phục da nhờn, trị hôi nách,…",
   },
   // data start end
   {

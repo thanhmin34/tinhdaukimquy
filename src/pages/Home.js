@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
-import Section, { Section2 } from "../components/Section";
+import Section from "../components/Section";
 import productData from "../data/products";
 import { Post2, posts } from "./Blog";
 import { SectionInfo } from "./Intro";
 const Home = () => {
   const pro = productData.getAllProducts();
-  const [loading, setLoading] = useState(true);
+
   const [productSaler, setProductSaler] = useState([]);
   const [other, setOther] = useState([]);
   const [news, setnews] = useState([]);
@@ -59,20 +59,51 @@ const Home = () => {
           <Banner img="IMG_7530.png" />
         </div>
       </div>
+      <div className="w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto gap-5 my-5 md:my-5 lg:my-16">
+        <div className="line w-full px-20 border-top pt-8"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="flex flex-col gap-2 md:gap-5 items-center justify-center px-5 text-center">
+            <img src="/icon1.png" alt="" className="w-[60px]" />
+            <span>
+              Lành tính tới mức có thể xoa lên da em bé, dây là điều làm cho các
+              bà mẹ ưa chuộng dầu tràm Huế đến vậy.
+            </span>
+          </div>
+          <div className="flex flex-col gap-2 md:gap-5 items-center justify-center px-5 text-center">
+            <img src="/icon2.png" alt="" className="w-[60px]" />
+            <span>
+              Dầu tràm gió chiết xuất tự nhiên và các chế phẩm dẫn xuất dưới
+              dạng xông, hít mũi trong phòng làm việc.
+            </span>
+          </div>
+          <div className="flex flex-col gap-2 md:gap-5 items-center justify-center px-5 text-center">
+            <img src="/icon3.png" alt="" className="w-[60px]" />
+            <span>Có hương thơm diệu nhẹ xua đuổi các côn trùng, muỗi</span>
+          </div>
+          <div className="flex flex-col gap-2 md:gap-5 items-center justify-center px-5 text-center">
+            <img src="/icon4.png" alt="" className="w-[60px]" />
+            <span>
+              Tạo hương thơm dễ chịu lại vừa sát khuẩn, ức chế virus, đặc biệt
+              đang trong mùa cao điểm sốt, cúm.
+            </span>
+          </div>
+        </div>
+        <div className="line w-full  px-20 border-b pb-8"></div>
+      </div>
       <div className="w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto gap-5 md:my-5 lg:my-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 gap-x-5">
-          <div className="flex">
+          <div className="flex pt-[54%] relative">
             <img
               src="/IMG_7534.jpg"
               alt=""
-              className="border-relex-btn w-full max-w-[640px]"
+              className="border-relex-btn w-full h-full absolute top-0 left-0 right-0 object-cover"
             />
           </div>
-          <div className="flex">
+          <div className="flex pt-[54%] relative">
             <img
               src="/IMG_7529.png"
               alt=""
-              className="border-relex-btn max-w-[640px] w-full h-full object-cover"
+              className="border-relex-btn w-full h-full absolute top-0 left-0 right-0  object-cover"
             />
           </div>
         </div>
