@@ -99,14 +99,14 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 gap-x-5">
           <div className="flex pt-[54%] relative">
             <img
-              src="/chuong8.jpg"
+              src="/chuong8.PNG"
               alt="tinh dầu thái việt"
               className="border-relex-btn w-full h-full absolute top-0 left-0 right-0 object-cover"
             />
           </div>
           <div className="flex pt-[54%] relative">
             <img
-              src="/chuong9.png"
+              src="/chuong9.JPG"
               alt="tinh dầu thái việt"
               className="border-relex-btn w-full h-full absolute top-0 left-0 right-0  object-cover"
             />
