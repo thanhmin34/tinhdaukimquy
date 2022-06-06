@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Section = ({ title, data: productSaler }) => {
   return (
     <div className=" w-full max-w-[1280px] mx-auto px-[10px] md:px-4 lg:px-5 xl:px-8 mt-10 mb-10 lg:mb-20">
-      <h2 className="text-center text-4xl  xl:text-5xl font-bold text-b ">
+      <h2 className="text-center text-3xl  xl:text-4xl font-bold text-b ">
         {title}
       </h2>
       <div className=" py-10">

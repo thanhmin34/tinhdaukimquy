@@ -46,7 +46,7 @@ const Contact = () => {
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-10">
         <div className="flex text-base flex-col px-4 gap-2 text-center">
           <h2 className="text-center">
-            CÔNG TY TNHH SẢN XUẤT TINH DẦU KIM VUI
+            CÔNG TY TNHH SẢN XUẤT TINH DẦU THÁI VIỆT
           </h2>
           <div className=" flex flex-col ">
             <span className="">
@@ -57,7 +57,7 @@ const Contact = () => {
               <strong>Người đại diện: </strong> Nguyễn Tiến Dũng
             </span>
             <span className="">
-              <strong>Điện thoại: </strong> 0984 080 155
+              <strong>Điện thoại: </strong> 0828 46 9977
             </span>
             <span className="">
               <strong>Email: </strong>

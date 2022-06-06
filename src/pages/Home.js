@@ -49,7 +49,9 @@ const Home = () => {
       </div>
       <div className="flex items-center flex-col">
         <div className="flex flex-col">
-          <h1 className="text-center text-5xl font-bold  mb-3">Giới Thiệu</h1>
+          <h1 className="text-center md:text-4xl text-3xl  font-bold  mb-3">
+            Giới Thiệu
+          </h1>
           <p className="text-lg font-bold text-center px-4">
             Tinh dầu Tràm Huế Thái Việt – Chất lượng tạo nên sự khác biệt
           </p>
@@ -95,14 +97,14 @@ const Home = () => {
           <div className="flex pt-[54%] relative">
             <img
               src="/IMG_7534.jpg"
-              alt=""
+              alt="tinh dầu thái việt"
               className="border-relex-btn w-full h-full absolute top-0 left-0 right-0 object-cover"
             />
           </div>
           <div className="flex pt-[54%] relative">
             <img
               src="/IMG_7529.png"
-              alt=""
+              alt="tinh dầu thái việt"
               className="border-relex-btn w-full h-full absolute top-0 left-0 right-0  object-cover"
             />
           </div>
@@ -111,7 +113,9 @@ const Home = () => {
       <Section title="Sản Phẩm Bán Chạy" data={other} />
 
       <Section title="Được Đánh Giá Cao" data={productSaler} />
-
+      <div className="flex justify-center items-center w-full mx-auto mt-5">
+        <h2 className="lg:text-4xl text-3xl font-bold">Bài Viết</h2>
+      </div>
       <div className=" grid grid-cols-1 md:grid-cols-3 w-full max-w-[1280px] px-[10px] md:px-3 lg:px-5 xl:px-8 mx-auto gap-10 md:my-5 lg:my-16">
         {posts.length > 0 &&
           posts
@@ -139,7 +143,12 @@ const slides = [
 function Banner({ img }) {
   return (
     <div className="w-full my-10 md:my-16 xl:my-20">
-      <img src={img} alt="" />
+      <img
+        src={img}
+        alt="tinh dầu thái việt"
+        name="tinh dầu thái việt"
+        className="w-full max-w-[500px] object-cover"
+      />
     </div>
   );
 }
@@ -149,7 +158,7 @@ function Slides({ img }) {
     <div className="flex overflow-hidden cursor-pointer ">
       <img
         src={img}
-        alt=""
+        alt="tinh dầu thái việt"
         className="border-relex-btn w-full max-w-[500px] h-full object-cover"
       />
     </div>
